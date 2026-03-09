@@ -1,3 +1,7 @@
+/* ========================================
+   RESET Y CONFIGURACIÓN GLOBAL
+   ======================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,23 +15,43 @@ body {
     background: #f5f5f5;
 }
 
-/* Navbar */
+/* ========================================
+   VARIABLES DE COLOR (Colores institucionales)
+   ======================================== */
+
+:root {
+    --color-primary: #c41e3a;
+    --color-primary-dark: #8b0000;
+    --color-white: #ffffff;
+    --color-text: #333333;
+    --color-text-light: #555555;
+    --color-background: #f5f5f5;
+    --color-background-light: #f8f9fa;
+    --color-border: #e0e0e0;
+    --color-footer: #2c2c2c;
+}
+
+/* ========================================
+   BARRA DE NAVEGACIÓN
+   ======================================== */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 5%;
-    background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Logo del sistema */
 .logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-size: 1.5rem;
     font-weight: bold;
-    color: white;
+    color: var(--color-white);
 }
 
 .logo-icon {
@@ -38,6 +62,7 @@ body {
     letter-spacing: 1px;
 }
 
+/* Enlaces de navegación */
 .nav-links {
     display: flex;
     list-style: none;
@@ -45,10 +70,10 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: var(--color-white);
     text-decoration: none;
     font-weight: 500;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -56,10 +81,13 @@ body {
     text-decoration: underline;
 }
 
-/* Hero Section */
+/* ========================================
+   SECCIÓN HERO (Portada principal)
+   ======================================== */
+
 .hero {
-    background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
     padding: 6rem 5%;
     text-align: center;
 }
@@ -79,11 +107,16 @@ body {
     margin-right: auto;
 }
 
+/* Botones de llamada a la acción */
 .hero-buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.hero-buttons a {
+    text-decoration: none;
 }
 
 .cta-button {
@@ -93,38 +126,42 @@ body {
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cta-button.primary {
-    background: white;
-    color: #c41e3a;
+    background: var(--color-white);
+    color: var(--color-primary);
 }
 
 .cta-button.secondary {
     background: transparent;
-    color: white;
-    border: 2px solid white;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Features Section */
+/* ========================================
+   SECCIÓN DE FUNCIONALIDADES
+   ======================================== */
+
 .features {
     padding: 5rem 5%;
-    background: white;
+    background: var(--color-white);
 }
 
 .features h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #c41e3a;
+    color: var(--color-primary);
 }
 
+/* Grid de tarjetas de funcionalidades */
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -133,19 +170,20 @@ body {
     margin: 0 auto;
 }
 
+/* Tarjeta individual de funcionalidad */
 .feature-card {
-    background: #f8f9fa;
+    background: var(--color-background-light);
     padding: 2.5rem;
     border-radius: 12px;
     text-align: center;
-    border: 2px solid #e0e0e0;
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    border: 2px solid var(--color-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .feature-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 25px rgba(196, 30, 58, 0.15);
-    border-color: #c41e3a;
+    border-color: var(--color-primary);
 }
 
 .icon {
@@ -156,27 +194,31 @@ body {
 .feature-card h3 {
     font-size: 1.4rem;
     margin-bottom: 1rem;
-    color: #c41e3a;
+    color: var(--color-primary);
 }
 
 .feature-card p {
-    color: #555;
+    color: var(--color-text-light);
     line-height: 1.6;
 }
 
-/* Users Section */
+/* ========================================
+   SECCIÓN DE TIPOS DE USUARIOS
+   ======================================== */
+
 .users {
     padding: 5rem 5%;
-    background: #f8f9fa;
+    background: var(--color-background-light);
 }
 
 .users h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #c41e3a;
+    color: var(--color-primary);
 }
 
+/* Grid de tarjetas de usuarios */
 .user-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -185,12 +227,13 @@ body {
     margin: 0 auto;
 }
 
+/* Tarjeta individual de tipo de usuario */
 .user-card {
-    background: white;
+    background: var(--color-white);
     padding: 2.5rem;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .user-card:hover {
@@ -206,10 +249,11 @@ body {
 .user-card h3 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    color: #c41e3a;
+    color: var(--color-primary);
     text-align: center;
 }
 
+/* Lista de funcionalidades por usuario */
 .user-card ul {
     list-style: none;
     padding: 0;
@@ -217,13 +261,13 @@ body {
 
 .user-card ul li {
     padding: 0.7rem 0;
-    border-bottom: 1px solid #e0e0e0;
-    color: #555;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text-light);
 }
 
 .user-card ul li:before {
     content: "✓ ";
-    color: #c41e3a;
+    color: var(--color-primary);
     font-weight: bold;
     margin-right: 0.5rem;
 }
@@ -232,17 +276,20 @@ body {
     border-bottom: none;
 }
 
-/* Login Section */
+/* ========================================
+   SECCIÓN DE LOGIN Y REGISTRO
+   ======================================== */
+
 .login-section {
     padding: 5rem 5%;
-    background: white;
+    background: var(--color-white);
 }
 
 .login-section h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #c41e3a;
+    color: var(--color-primary);
 }
 
 .login-container {
@@ -250,13 +297,15 @@ body {
     margin: 0 auto;
 }
 
+/* Formulario de login/registro */
 .login-form {
-    background: #f8f9fa;
+    background: var(--color-background-light);
     padding: 3rem;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Grupo de campos del formulario */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -264,7 +313,7 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: var(--color-text);
     font-weight: 600;
 }
 
@@ -272,30 +321,31 @@ body {
 .form-group select {
     width: 100%;
     padding: 1rem;
-    border: 2px solid #e0e0e0;
+    border: 2px solid var(--color-border);
     border-radius: 8px;
     font-size: 1rem;
     font-family: inherit;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
-    border-color: #c41e3a;
+    border-color: var(--color-primary);
 }
 
+/* Botón de envío del formulario */
 .login-button {
     width: 100%;
     padding: 1rem;
-    background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
     border: none;
     border-radius: 8px;
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-top: 1rem;
 }
 
@@ -304,11 +354,12 @@ body {
     box-shadow: 0 5px 15px rgba(196, 30, 58, 0.3);
 }
 
+/* Enlaces auxiliares del formulario */
 .forgot-password {
     display: block;
     text-align: center;
     margin-top: 1rem;
-    color: #c41e3a;
+    color: var(--color-primary);
     text-decoration: none;
     font-size: 0.9rem;
 }
@@ -317,25 +368,164 @@ body {
     text-decoration: underline;
 }
 
-/* Footer */
+/* ========================================
+   PIE DE PÁGINA
+   ======================================== */
+
 footer {
-    background: #2c2c2c;
-    color: white;
+    background: var(--color-footer);
+    color: var(--color-white);
     text-align: center;
-    padding: 2.5rem;
+    padding: 2.5rem 5%;
+}
+
+.footer-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+.footer-content h2:first-child {
+    margin-top: 0;
 }
 
 .footer-content p {
     margin: 0.5rem 0;
 }
 
-.footer-content p:first-child {
-    font-weight: bold;
-    font-size: 1.1rem;
+/* Botón de mapa en el footer */
+.btn-mapa {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1rem 0;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-/* Responsive */
+.btn-mapa:hover {
+    transform: translateY(-3px);
+    background: var(--color-primary-dark);
+}
+
+.btn-mapa a {
+    color: var(--color-white);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+/* Redes sociales en el footer */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.social-icon {
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--color-white);
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.social-icon:hover {
+    background: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   PÁGINA DE UBICACIÓN
+   ======================================== */
+
+.ubicacion-section {
+    padding: 5rem 5%;
+    background: var(--color-background-light);
+    min-height: 70vh;
+}
+
+.ubicacion-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ubicacion-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+}
+
+.ubicacion-info {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ubicacion-info h3 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.ubicacion-info p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    color: var(--color-text);
+}
+
+/* Contenedor del mapa de Google */
+.mapa-container {
+    background: var(--color-white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.mapa-container iframe {
+    border-radius: 8px;
+    width: 100%;
+    height: 450px;
+}
+
+.ubicacion-detalles {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ubicacion-detalles h3 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.ubicacion-detalles p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin: 0.8rem 0;
+}
+
+/* ========================================
+   DISEÑO RESPONSIVE (Móviles y tablets)
+   ======================================== */
+
 @media (max-width: 768px) {
+    /* Navegación en móviles */
     .nav-links {
         gap: 1rem;
         font-size: 0.9rem;
@@ -345,6 +535,7 @@ footer {
         font-size: 1.2rem;
     }
     
+    /* Hero en móviles */
     .hero-content h1 {
         font-size: 2rem;
     }
@@ -363,12 +554,35 @@ footer {
         max-width: 300px;
     }
     
+    /* Grids en una sola columna */
     .feature-grid,
     .user-grid {
         grid-template-columns: 1fr;
     }
     
+    /* Formulario más compacto */
     .login-form {
         padding: 2rem;
+    }
+    
+    /* Redes sociales en móviles */
+    .social-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .social-icon {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    /* Mapa en móviles */
+    .mapa-container iframe {
+        height: 300px;
+    }
+    
+    .ubicacion-container h2 {
+        font-size: 1.8rem;
     }
 }

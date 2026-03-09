@@ -1,8 +1,83 @@
 <!DOCTYPE html>
-<html lang="es">    
-    <h3>Ubicación del Sistema ASISTE-UNILIBRE</h3>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2025103.3911645364!2d-73.52462008033802!3d7.544406581841646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e664540a6ea196f%3A0xb1d0e71aebd40351!2sUniversidad%20Libre%20Seccional%20C%C3%BAcuta!5e0!3m2!1ses!2sco!4v1772225175569!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ubicación de la Universidad Libre - ASISTE-UNILIBRE">
+    <title>Ubicación - ASISTE-UNILIBRE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado con navegación principal -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">ASISTE-UNILIBRE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="funcionalidades.html">Funcionalidades</a></li>
+                <li><a href="usuarios.html">Usuarios</a></li>
+                <li><a href="login.html">Acceso</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de ubicación con mapa -->
+    <section class="ubicacion-section">
+        <div class="ubicacion-container">
+            <h2>Ubicación del Sistema ASISTE-UNILIBRE</h2>
+            <div class="ubicacion-info">
+                <h3>Universidad Libre Seccional Cúcuta</h3>
+                <p>📍 Avenida 4ta No. 12N-81, Urbanización El Bosque</p>
+                <p>🏙️ Cúcuta, Colombia</p>
+            </div>
+            
+            <div class="mapa-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2025103.3911645364!2d-73.52462008033802!3d7.544406581841646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e664540a6ea196f%3A0xb1d0e71aebd40351!2sUniversidad%20Libre%20Seccional%20C%C3%BAcuta!5e0!3m2!1ses!2sco!4v1772225175569!5m2!1ses!2sco" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+            <div class="ubicacion-detalles">
+                <h3>Cómo llegar</h3>
+                <p>La Universidad Libre se encuentra ubicada en la Urbanización El Bosque, una zona de fácil acceso en la ciudad de Cúcuta.</p>
+                <p>Puedes utilizar el mapa interactivo para obtener direcciones desde tu ubicación actual.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página con información de integrantes -->
+    <footer>
+        <div class="footer-content">
+            <h2>Integrantes</h2>
+            <p>Kevin, Miguel, Andrés</p>
+            
+            <h2>Ubicación</h2>
+            <p>Avenida 4ta No. 12N-81, Urbanización El Bosque, Cúcuta, Colombia</p>
+            
+            <button class="btn-mapa" onclick="mostrarMapa()">
+                <a href="ubicanos.html">Ubícanos</a>
+                Ver ubicación en Google Maps
+            </button>
+            
+            <h2>Síguenos en Redes Sociales</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/unilibre" target="_blank" class="social-icon">📘 Facebook</a>
+                <a href="https://www.instagram.com/unilibre" target="_blank" class="social-icon">📷 Instagram</a>
+                <a href="https://twitter.com/unilibre" target="_blank" class="social-icon">🐦 Twitter</a>
+                <a href="https://www.youtube.com/unilibre" target="_blank" class="social-icon">📺 YouTube</a>
+            </div>
+            
+            <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
 </html>
-
-
