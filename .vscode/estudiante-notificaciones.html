@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones - ASISTE-UNILIBRE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">ASISTE-UNILIBRE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="estudiante.html">Dashboard</a></li>
+                <li><a href="perfil.html">Mi Perfil</a></li>
+                <li><a href="notificaciones.html">Notificaciones</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content-section">
+        <div class="content-container">
+            <div class="page-header">
+                <button onclick="history.back()" class="btn-back">← Volver</button>
+                <h2>🔔 Mis Notificaciones</h2>
+            </div>
+            
+            <div class="notifications-list">
+                <div class="notification-item notification-info">
+                    <div class="notification-icon">ℹ️</div>
+                    <div class="notification-content">
+                        <h4>Clase Programada</h4>
+                        <p>Tienes clase de Programación Web hoy a las 8:00 AM en el Salón 301</p>
+                        <span class="notification-time">Hace 2 horas</span>
+                    </div>
+                </div>
+
+                <div class="notification-item notification-success">
+                    <div class="notification-icon">✅</div>
+                    <div class="notification-content">
+                        <h4>Asistencia Registrada</h4>
+                        <p>Tu asistencia a Base de Datos ha sido registrada correctamente</p>
+                        <span class="notification-time">Ayer</span>
+                    </div>
+                </div>
+
+                <div class="notification-item notification-warning">
+                    <div class="notification-icon">⚠️</div>
+                    <div class="notification-content">
+                        <h4>Alerta de Asistencia</h4>
+                        <p>Has faltado 3 veces a Ingeniería de Software. Recuerda que el límite es 5 faltas</p>
+                        <span class="notification-time">Hace 2 días</span>
+                    </div>
+                </div>
+
+                <div class="notification-item notification-info">
+                    <div class="notification-icon">📅</div>
+                    <div class="notification-content">
+                        <h4>Cambio de Horario</h4>
+                        <p>La clase de Redes de Computadores del viernes se ha movido al Salón 205</p>
+                        <span class="notification-time">Hace 3 días</span>
+                    </div>
+                </div>
+
+                <div class="notification-item notification-success">
+                    <div class="notification-icon">📊</div>
+                    <div class="notification-content">
+                        <h4>Reporte Disponible</h4>
+                        <p>Tu reporte de asistencias del mes de febrero está disponible</p>
+                        <span class="notification-time">Hace 5 días</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 ASISTE-UNILIBRE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

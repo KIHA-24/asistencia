@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Clases - ASISTE-UNILIBRE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">ASISTE-UNILIBRE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="docente.html">Dashboard</a></li>
+                <li><a href="perfil.html">Mi Perfil</a></li>
+                <li><a href="notificaciones.html">Notificaciones</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content-section">
+        <div class="content-container">
+            <div class="page-header">
+                <button onclick="history.back()" class="btn-back">← Volver</button>
+                <h2>📋 Historial de Clases</h2>
+            </div>
+            
+            <div class="filter-section">
+                <select class="filter-select">
+                    <option>Todas las Asignaturas</option>
+                    <option>Programación Web</option>
+                    <option>Base de Datos</option>
+                </select>
+                <select class="filter-select">
+                    <option>Este Mes</option>
+                    <option>Último Mes</option>
+                    <option>Este Semestre</option>
+                </select>
+            </div>
+
+            <div class="clases-historial">
+                <div class="historial-card">
+                    <div class="historial-header">
+                        <h3>Programación Web - PW-301</h3>
+                        <span class="fecha-badge">09/03/2026</span>
+                    </div>
+                    <div class="historial-body">
+                        <p><strong>Hora:</strong> 8:00 AM - 10:00 AM</p>
+                        <p><strong>Salón:</strong> 301</p>
+                        <div class="stats-inline">
+                            <span class="stat-item">👥 35 estudiantes</span>
+                            <span class="stat-item">✅ 32 presentes</span>
+                            <span class="stat-item">❌ 2 ausentes</span>
+                            <span class="stat-item">⏰ 1 tardanza</span>
+                        </div>
+                    </div>
+                    <div class="historial-footer">
+                        <button class="btn-small">Ver Detalles</button>
+                        <button class="btn-small">Editar</button>
+                    </div>
+                </div>
+
+                <div class="historial-card">
+                    <div class="historial-header">
+                        <h3>Base de Datos - BD-205</h3>
+                        <span class="fecha-badge">08/03/2026</span>
+                    </div>
+                    <div class="historial-body">
+                        <p><strong>Hora:</strong> 2:00 PM - 4:00 PM</p>
+                        <p><strong>Salón:</strong> 205</p>
+                        <div class="stats-inline">
+                            <span class="stat-item">👥 28 estudiantes</span>
+                            <span class="stat-item">✅ 26 presentes</span>
+                            <span class="stat-item">❌ 1 ausente</span>
+                            <span class="stat-item">⏰ 1 tardanza</span>
+                        </div>
+                    </div>
+                    <div class="historial-footer">
+                        <button class="btn-small">Ver Detalles</button>
+                        <button class="btn-small">Editar</button>
+                    </div>
+                </div>
+
+                <div class="historial-card">
+                    <div class="historial-header">
+                        <h3>Programación Web - PW-301</h3>
+                        <span class="fecha-badge">06/03/2026</span>
+                    </div>
+                    <div class="historial-body">
+                        <p><strong>Hora:</strong> 8:00 AM - 10:00 AM</p>
+                        <p><strong>Salón:</strong> 301</p>
+                        <div class="stats-inline">
+                            <span class="stat-item">👥 35 estudiantes</span>
+                            <span class="stat-item">✅ 33 presentes</span>
+                            <span class="stat-item">❌ 2 ausentes</span>
+                            <span class="stat-item">⏰ 0 tardanzas</span>
+                        </div>
+                    </div>
+                    <div class="historial-footer">
+                        <button class="btn-small">Ver Detalles</button>
+                        <button class="btn-small">Editar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 ASISTE-UNILIBRE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

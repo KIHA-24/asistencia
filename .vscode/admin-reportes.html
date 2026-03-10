@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes Generales - ASISTE-UNILIBRE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">ASISTE-UNILIBRE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="administrador.html">Dashboard</a></li>
+                <li><a href="perfil.html">Mi Perfil</a></li>
+                <li><a href="notificaciones.html">Notificaciones</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content-section">
+        <div class="content-container">
+            <div class="page-header">
+                <button onclick="history.back()" class="btn-back">← Volver</button>
+                <h2>📊 Reportes Generales del Sistema</h2>
+            </div>
+            
+            <div class="stats-dashboard">
+                <div class="stat-card-large">
+                    <h3>Asistencia General</h3>
+                    <div class="stat-number-large">95%</div>
+                    <p>Promedio del sistema</p>
+                </div>
+                <div class="stat-card-large">
+                    <h3>Total Estudiantes</h3>
+                    <div class="stat-number-large">1,250</div>
+                    <p>Activos en el periodo</p>
+                </div>
+                <div class="stat-card-large">
+                    <h3>Total Docentes</h3>
+                    <div class="stat-number-large">85</div>
+                    <p>Activos en el periodo</p>
+                </div>
+                <div class="stat-card-large">
+                    <h3>Clases Registradas</h3>
+                    <div class="stat-number-large">3,450</div>
+                    <p>En el periodo actual</p>
+                </div>
+            </div>
+
+            <div class="reportes-tipos">
+                <h3>Tipos de Reportes Disponibles</h3>
+                <div class="reportes-grid">
+                    <div class="reporte-tipo-card">
+                        <div class="reporte-icon">📈</div>
+                        <h4>Reporte de Asistencia General</h4>
+                        <p>Estadísticas globales de asistencia del sistema</p>
+                        <button class="btn-primary">Generar</button>
+                    </div>
+
+                    <div class="reporte-tipo-card">
+                        <div class="reporte-icon">👥</div>
+                        <h4>Reporte por Estudiante</h4>
+                        <p>Asistencia individual de estudiantes</p>
+                        <button class="btn-primary">Generar</button>
+                    </div>
+
+                    <div class="reporte-tipo-card">
+                        <div class="reporte-icon">👨‍🏫</div>
+                        <h4>Reporte por Docente</h4>
+                        <p>Clases registradas por docente</p>
+                        <button class="btn-primary">Generar</button>
+                    </div>
+
+                    <div class="reporte-tipo-card">
+                        <div class="reporte-icon">📚</div>
+                        <h4>Reporte por Asignatura</h4>
+                        <p>Estadísticas por materia</p>
+                        <button class="btn-primary">Generar</button>
+                    </div>
+
+                    <div class="reporte-tipo-card">
+                        <div class="reporte-icon">📅</div>
+                        <h4>Reporte por Periodo</h4>
+                        <p>Resumen completo del periodo académico</p>
+                        <button class="btn-primary">Generar</button>
+                    </div>
+
+                    <div class="reporte-tipo-card">
+                        <div class="reporte-icon">⚠️</div>
+                        <h4>Reporte de Alertas</h4>
+                        <p>Estudiantes en riesgo académico</p>
+                        <button class="btn-primary">Generar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reportes-recientes">
+                <h3>Reportes Generados Recientemente</h3>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Descripción</th>
+                                <th>Fecha</th>
+                                <th>Generado Por</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>General</td>
+                                <td>Reporte Asistencia Marzo 2026</td>
+                                <td>09/03/2026</td>
+                                <td>Admin Carlos</td>
+                                <td><button class="btn-download">Descargar</button></td>
+                            </tr>
+                            <tr>
+                                <td>Periodo</td>
+                                <td>Resumen Periodo 2026-1</td>
+                                <td>01/03/2026</td>
+                                <td>Admin Carlos</td>
+                                <td><button class="btn-download">Descargar</button></td>
+                            </tr>
+                            <tr>
+                                <td>Alertas</td>
+                                <td>Estudiantes en Riesgo</td>
+                                <td>25/02/2026</td>
+                                <td>Admin Carlos</td>
+                                <td><button class="btn-download">Descargar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 ASISTE-UNILIBRE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones - ASISTE-UNILIBRE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">ASISTE-UNILIBRE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html">Mi Perfil</a></li>
+                <li><a href="notificaciones.html">Notificaciones</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content-section">
+        <div class="content-container">
+            <div class="page-header">
+                <button onclick="history.back()" class="btn-back">← Volver</button>
+                <h2>🔔 Centro de Notificaciones</h2>
+            </div>
+            
+            <div class="notif-actions">
+                <button class="btn-small">Marcar todas como leídas</button>
+                <select class="filter-select">
+                    <option>Todas</option>
+                    <option>No leídas</option>
+                    <option>Leídas</option>
+                </select>
+            </div>
+
+            <div class="notifications-list">
+                <div class="notification-item notification-info unread">
+                    <div class="notification-icon">ℹ️</div>
+                    <div class="notification-content">
+                        <h4>Actualización del Sistema</h4>
+                        <p>El sistema estará en mantenimiento el próximo sábado de 2:00 AM a 6:00 AM</p>
+                        <span class="notification-time">Hace 1 hora</span>
+                    </div>
+                    <button class="btn-close">✕</button>
+                </div>
+
+                <div class="notification-item notification-success unread">
+                    <div class="notification-icon">✅</div>
+                    <div class="notification-content">
+                        <h4>Asistencia Registrada</h4>
+                        <p>Se ha registrado exitosamente la asistencia de la clase de Programación Web</p>
+                        <span class="notification-time">Hace 3 horas</span>
+                    </div>
+                    <button class="btn-close">✕</button>
+                </div>
+
+                <div class="notification-item notification-warning">
+                    <div class="notification-icon">⚠️</div>
+                    <div class="notification-content">
+                        <h4>Recordatorio</h4>
+                        <p>Recuerda completar el registro de asistencia de tus clases pendientes</p>
+                        <span class="notification-time">Ayer</span>
+                    </div>
+                    <button class="btn-close">✕</button>
+                </div>
+
+                <div class="notification-item notification-info">
+                    <div class="notification-icon">📅</div>
+                    <div class="notification-content">
+                        <h4>Nuevo Periodo Académico</h4>
+                        <p>El periodo 2026-1 ha iniciado. Revisa tu horario de clases</p>
+                        <span class="notification-time">Hace 2 días</span>
+                    </div>
+                    <button class="btn-close">✕</button>
+                </div>
+
+                <div class="notification-item notification-success">
+                    <div class="notification-icon">📊</div>
+                    <div class="notification-content">
+                        <h4>Reporte Disponible</h4>
+                        <p>Tu reporte mensual de asistencias está listo para descargar</p>
+                        <span class="notification-time">Hace 3 días</span>
+                    </div>
+                    <button class="btn-close">✕</button>
+                </div>
+
+                <div class="notification-item notification-info">
+                    <div class="notification-icon">👥</div>
+                    <div class="notification-content">
+                        <h4>Nuevo Usuario</h4>
+                        <p>Se ha registrado un nuevo estudiante en el sistema</p>
+                        <span class="notification-time">Hace 5 días</span>
+                    </div>
+                    <button class="btn-close">✕</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 ASISTE-UNILIBRE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

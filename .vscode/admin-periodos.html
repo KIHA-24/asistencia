@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodos Académicos - ASISTE-UNILIBRE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">ASISTE-UNILIBRE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="administrador.html">Dashboard</a></li>
+                <li><a href="perfil.html">Mi Perfil</a></li>
+                <li><a href="notificaciones.html">Notificaciones</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content-section">
+        <div class="content-container">
+            <div class="page-header">
+                <button onclick="history.back()" class="btn-back">← Volver</button>
+                <h2>📅 Gestión de Periodos Académicos</h2>
+            </div>
+            
+            <div class="actions-bar">
+                <button class="btn-primary">➕ Crear Nuevo Periodo</button>
+            </div>
+
+            <div class="periodos-grid">
+                <div class="periodo-card periodo-activo">
+                    <div class="periodo-header">
+                        <h3>Periodo 2026-1</h3>
+                        <span class="badge badge-success">Activo</span>
+                    </div>
+                    <div class="periodo-body">
+                        <p><strong>Fecha Inicio:</strong> 15/01/2026</p>
+                        <p><strong>Fecha Fin:</strong> 30/05/2026</p>
+                        <p><strong>Asignaturas:</strong> 45</p>
+                        <p><strong>Estudiantes:</strong> 1,250</p>
+                        <p><strong>Docentes:</strong> 85</p>
+                    </div>
+                    <div class="periodo-footer">
+                        <button class="btn-small">Editar</button>
+                        <button class="btn-small">Ver Detalles</button>
+                        <button class="btn-small">Finalizar</button>
+                    </div>
+                </div>
+
+                <div class="periodo-card">
+                    <div class="periodo-header">
+                        <h3>Periodo 2025-2</h3>
+                        <span class="badge badge-secondary">Finalizado</span>
+                    </div>
+                    <div class="periodo-body">
+                        <p><strong>Fecha Inicio:</strong> 01/08/2025</p>
+                        <p><strong>Fecha Fin:</strong> 15/12/2025</p>
+                        <p><strong>Asignaturas:</strong> 42</p>
+                        <p><strong>Estudiantes:</strong> 1,180</p>
+                        <p><strong>Docentes:</strong> 80</p>
+                    </div>
+                    <div class="periodo-footer">
+                        <button class="btn-small">Ver Detalles</button>
+                        <button class="btn-small">Reportes</button>
+                    </div>
+                </div>
+
+                <div class="periodo-card">
+                    <div class="periodo-header">
+                        <h3>Periodo 2025-1</h3>
+                        <span class="badge badge-secondary">Finalizado</span>
+                    </div>
+                    <div class="periodo-body">
+                        <p><strong>Fecha Inicio:</strong> 20/01/2025</p>
+                        <p><strong>Fecha Fin:</strong> 25/05/2025</p>
+                        <p><strong>Asignaturas:</strong> 40</p>
+                        <p><strong>Estudiantes:</strong> 1,100</p>
+                        <p><strong>Docentes:</strong> 75</p>
+                    </div>
+                    <div class="periodo-footer">
+                        <button class="btn-small">Ver Detalles</button>
+                        <button class="btn-small">Reportes</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="asignaturas-section">
+                <h3>Asignaturas del Periodo Actual</h3>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Nombre</th>
+                                <th>Docente</th>
+                                <th>Estudiantes</th>
+                                <th>Horario</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PW-301</td>
+                                <td>Programación Web</td>
+                                <td>Prof. García</td>
+                                <td>35</td>
+                                <td>Lun-Mie 8:00-10:00</td>
+                                <td><button class="btn-icon">✏️</button></td>
+                            </tr>
+                            <tr>
+                                <td>BD-205</td>
+                                <td>Base de Datos</td>
+                                <td>Prof. Martínez</td>
+                                <td>28</td>
+                                <td>Mar-Jue 2:00-4:00</td>
+                                <td><button class="btn-icon">✏️</button></td>
+                            </tr>
+                            <tr>
+                                <td>IS-402</td>
+                                <td>Ingeniería de Software</td>
+                                <td>Prof. López</td>
+                                <td>30</td>
+                                <td>Vie 10:00-12:00</td>
+                                <td><button class="btn-icon">✏️</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 ASISTE-UNILIBRE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

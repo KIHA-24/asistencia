@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - ASISTE-UNILIBRE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">ASISTE-UNILIBRE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="docente.html">Dashboard</a></li>
+                <li><a href="perfil.html">Mi Perfil</a></li>
+                <li><a href="notificaciones.html">Notificaciones</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content-section">
+        <div class="content-container">
+            <div class="page-header">
+                <button onclick="history.back()" class="btn-back">← Volver</button>
+                <h2>📊 Generar Reportes</h2>
+            </div>
+            
+            <div class="reporte-form-card">
+                <h3>Configurar Reporte</h3>
+                <form class="reporte-form">
+                    <div class="form-group">
+                        <label>Tipo de Reporte</label>
+                        <select class="form-control">
+                            <option>Reporte por Asignatura</option>
+                            <option>Reporte por Estudiante</option>
+                            <option>Reporte por Periodo</option>
+                            <option>Reporte General</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Asignatura</label>
+                        <select class="form-control">
+                            <option>Todas</option>
+                            <option>Programación Web</option>
+                            <option>Base de Datos</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Periodo</label>
+                        <select class="form-control">
+                            <option>2026-1</option>
+                            <option>2025-2</option>
+                            <option>2025-1</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fecha Inicio</label>
+                        <input type="date" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fecha Fin</label>
+                        <input type="date" class="form-control">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Generar Reporte</button>
+                        <button type="button" class="btn-secondary">Limpiar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="reportes-recientes">
+                <h3>Reportes Recientes</h3>
+                <div class="reportes-list">
+                    <div class="reporte-item">
+                        <div class="reporte-icon">📄</div>
+                        <div class="reporte-info">
+                            <h4>Reporte Programación Web - Marzo 2026</h4>
+                            <p>Generado el 09/03/2026</p>
+                        </div>
+                        <button class="btn-download">Descargar PDF</button>
+                    </div>
+
+                    <div class="reporte-item">
+                        <div class="reporte-icon">📄</div>
+                        <div class="reporte-info">
+                            <h4>Reporte Base de Datos - Febrero 2026</h4>
+                            <p>Generado el 28/02/2026</p>
+                        </div>
+                        <button class="btn-download">Descargar PDF</button>
+                    </div>
+
+                    <div class="reporte-item">
+                        <div class="reporte-icon">📄</div>
+                        <div class="reporte-info">
+                            <h4>Reporte General - Periodo 2026-1</h4>
+                            <p>Generado el 15/02/2026</p>
+                        </div>
+                        <button class="btn-download">Descargar PDF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 ASISTE-UNILIBRE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

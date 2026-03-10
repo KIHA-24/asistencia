@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard del Administrador - ASISTE-UNILIBRE">
+    <title>Dashboard Administrador - ASISTE-UNILIBRE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado con navegación principal -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">ASISTE-UNILIBRE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="administrador.html">Dashboard</a></li>
+                <li><a href="perfil.html">Mi Perfil</a></li>
+                <li><a href="notificaciones.html">Notificaciones</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de bienvenida -->
+    <section class="dashboard-hero">
+        <div class="dashboard-welcome">
+            <h1>👨‍💼 Bienvenido, Administrador</h1>
+            <p>Panel de Control del Sistema ASISTE-UNILIBRE</p>
+        </div>
+    </section>
+
+    <!-- Panel de control del administrador -->
+    <section class="dashboard-section">
+        <div class="dashboard-container">
+            <h2>Panel de Administración</h2>
+            
+            <div class="dashboard-grid">
+                <!-- Gestión de Usuarios -->
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">👥</div>
+                    <h3>Gestionar Usuarios</h3>
+                    <p>Crear, editar y eliminar usuarios del sistema</p>
+                    <a href="admin-usuarios.html" class="dashboard-btn">Acceder</a>
+                </div>
+
+                <!-- Periodos Académicos -->
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">📅</div>
+                    <h3>Periodos Académicos</h3>
+                    <p>Administrar periodos y asignaturas</p>
+                    <a href="admin-periodos.html" class="dashboard-btn">Acceder</a>
+                </div>
+
+                <!-- Reportes Generales -->
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">📊</div>
+                    <h3>Reportes Generales</h3>
+                    <p>Ver estadísticas y reportes del sistema</p>
+                    <a href="admin-reportes.html" class="dashboard-btn">Acceder</a>
+                </div>
+
+                <!-- Configuración del Sistema -->
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">⚙️</div>
+                    <h3>Configuración</h3>
+                    <p>Configurar parámetros del sistema</p>
+                    <a href="#" class="dashboard-btn">Acceder</a>
+                </div>
+
+                <!-- Horarios -->
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">🕐</div>
+                    <h3>Gestión de Horarios</h3>
+                    <p>Configurar horarios de clases</p>
+                    <a href="#" class="dashboard-btn">Acceder</a>
+                </div>
+
+                <!-- Notificaciones -->
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">🔔</div>
+                    <h3>Notificaciones</h3>
+                    <p>Enviar notificaciones masivas</p>
+                    <a href="notificaciones.html" class="dashboard-btn">Acceder</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estadísticas rápidas -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <h2>Estadísticas del Sistema</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">1,250</div>
+                    <div class="stat-label">Estudiantes Activos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">85</div>
+                    <div class="stat-label">Docentes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">45</div>
+                    <div class="stat-label">Asignaturas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Asistencia Promedio</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-content">
+            <h2>Integrantes</h2>
+            <p>Kevin, Miguel, Andrés</p>
+            
+            <h2>Ubicación</h2>
+            <p>Avenida 4ta No. 12N-81, Urbanización El Bosque, Cúcuta, Colombia</p>
+            
+            <button class="btn-mapa" onclick="mostrarMapa()">
+                <a href="ubicanos.html">Ubícanos</a>
+                Ver ubicación en Google Maps
+            </button>
+            
+            <h2>Síguenos en Redes Sociales</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/unilibre" target="_blank" class="social-icon">📘 Facebook</a>
+                <a href="https://www.instagram.com/unilibre" target="_blank" class="social-icon">📷 Instagram</a>
+                <a href="https://twitter.com/unilibre" target="_blank" class="social-icon">🐦 Twitter</a>
+                <a href="https://www.youtube.com/unilibre" target="_blank" class="social-icon">📺 YouTube</a>
+            </div>
+            
+            <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

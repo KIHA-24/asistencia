@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Usuarios - ASISTE-UNILIBRE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">ASISTE-UNILIBRE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="administrador.html">Dashboard</a></li>
+                <li><a href="perfil.html">Mi Perfil</a></li>
+                <li><a href="notificaciones.html">Notificaciones</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content-section">
+        <div class="content-container">
+            <div class="page-header">
+                <button onclick="history.back()" class="btn-back">← Volver</button>
+                <h2>👥 Gestión de Usuarios</h2>
+            </div>
+            
+            <div class="actions-bar">
+                <button class="btn-primary">➕ Crear Nuevo Usuario</button>
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar usuario..." class="search-input">
+                </div>
+                <select class="filter-select">
+                    <option>Todos los Roles</option>
+                    <option>Administradores</option>
+                    <option>Docentes</option>
+                    <option>Estudiantes</option>
+                </select>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Rol</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ADM001</td>
+                            <td>Carlos Admin</td>
+                            <td>carlos.admin@unilibre.edu.co</td>
+                            <td><span class="badge badge-admin">Administrador</span></td>
+                            <td><span class="badge badge-success">Activo</span></td>
+                            <td>
+                                <button class="btn-icon">✏️</button>
+                                <button class="btn-icon">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>DOC001</td>
+                            <td>Prof. García</td>
+                            <td>garcia@unilibre.edu.co</td>
+                            <td><span class="badge badge-docente">Docente</span></td>
+                            <td><span class="badge badge-success">Activo</span></td>
+                            <td>
+                                <button class="btn-icon">✏️</button>
+                                <button class="btn-icon">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>DOC002</td>
+                            <td>Prof. Martínez</td>
+                            <td>martinez@unilibre.edu.co</td>
+                            <td><span class="badge badge-docente">Docente</span></td>
+                            <td><span class="badge badge-success">Activo</span></td>
+                            <td>
+                                <button class="btn-icon">✏️</button>
+                                <button class="btn-icon">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>EST001</td>
+                            <td>Juan Pérez</td>
+                            <td>juan.perez@unilibre.edu.co</td>
+                            <td><span class="badge badge-estudiante">Estudiante</span></td>
+                            <td><span class="badge badge-success">Activo</span></td>
+                            <td>
+                                <button class="btn-icon">✏️</button>
+                                <button class="btn-icon">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>EST002</td>
+                            <td>María González</td>
+                            <td>maria.gonzalez@unilibre.edu.co</td>
+                            <td><span class="badge badge-estudiante">Estudiante</span></td>
+                            <td><span class="badge badge-warning">Inactivo</span></td>
+                            <td>
+                                <button class="btn-icon">✏️</button>
+                                <button class="btn-icon">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button class="btn-page">« Anterior</button>
+                <button class="btn-page active">1</button>
+                <button class="btn-page">2</button>
+                <button class="btn-page">3</button>
+                <button class="btn-page">Siguiente »</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 ASISTE-UNILIBRE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
