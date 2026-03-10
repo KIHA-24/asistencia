@@ -371,7 +371,6 @@ estudiante.html
 - No tiene backend ni base de datos real
 - Los datos mostrados son ejemplos
 - Las funciones de guardar/editar son simuladas
-- Ideal para presentaciones y prototipos
 
 ---
 
