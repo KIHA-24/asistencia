@@ -38,11 +38,27 @@
             <h2>Mis Funciones</h2>
             
             <div class="dashboard-grid">
+                <!-- Iniciar Clase -->
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">▶️</div>
+                    <h3>Iniciar Clase</h3>
+                    <p>Iniciar sesión de clase y activar registro de asistencia</p>
+                    <a href="docente-registro.html" class="dashboard-btn">Iniciar</a>
+                </div>
+
+                <!-- Finalizar Clase -->
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">⏹️</div>
+                    <h3>Finalizar Clase</h3>
+                    <p>Cerrar la sesión activa y bloquear nuevos registros</p>
+                    <a href="docente-finalizar.html" class="dashboard-btn">Finalizar</a>
+                </div>
+
                 <!-- Registrar Asistencia -->
                 <div class="dashboard-card">
                     <div class="dashboard-icon">✅</div>
-                    <h3>Registrar Asistencia</h3>
-                    <p>Tomar asistencia de la clase actual</p>
+                    <h3>Activar Asistencia</h3>
+                    <p>Notificar a estudiantes para que confirmen su presencia</p>
                     <a href="docente-registro.html" class="dashboard-btn">Acceder</a>
                 </div>
 
@@ -62,22 +78,6 @@
                     <a href="docente-reportes.html" class="dashboard-btn">Acceder</a>
                 </div>
 
-                <!-- Horarios -->
-                <div class="dashboard-card">
-                    <div class="dashboard-icon">🕐</div>
-                    <h3>Mis Horarios</h3>
-                    <p>Ver horario de clases asignadas</p>
-                    <a href="#" class="dashboard-btn">Acceder</a>
-                </div>
-
-                <!-- Estudiantes -->
-                <div class="dashboard-card">
-                    <div class="dashboard-icon">👥</div>
-                    <h3>Mis Estudiantes</h3>
-                    <p>Lista de estudiantes por asignatura</p>
-                    <a href="#" class="dashboard-btn">Acceder</a>
-                </div>
-
                 <!-- Notificaciones -->
                 <div class="dashboard-card">
                     <div class="dashboard-icon">🔔</div>
@@ -89,24 +89,33 @@
         </div>
     </section>
 
-    <!-- Clases de hoy -->
+    <!-- Clases de hoy con estado de sesión -->
     <section class="stats-section">
         <div class="stats-container">
             <h2>Mis Clases de Hoy</h2>
             <div class="clases-grid">
+                <!-- Clase con sesión activa -->
                 <div class="clase-card">
                     <h3>Programación Web</h3>
                     <p>⏰ 8:00 AM - 10:00 AM</p>
                     <p>📍 Salón 301</p>
                     <p>👥 35 estudiantes</p>
-                    <a href="docente-registro.html" class="clase-btn">Tomar Asistencia</a>
+                    <span class="badge badge-success" style="display:inline-block; margin: 0.5rem 0;">🟢 Clase Activa</span>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                        <a href="docente-registro.html" class="clase-btn">Activar Asistencia</a>
+                        <a href="docente-finalizar.html" class="clase-btn" style="background: #8b0000;">Finalizar</a>
+                    </div>
                 </div>
+                <!-- Clase pendiente de iniciar -->
                 <div class="clase-card">
                     <h3>Base de Datos</h3>
                     <p>⏰ 2:00 PM - 4:00 PM</p>
                     <p>📍 Salón 205</p>
                     <p>👥 28 estudiantes</p>
-                    <a href="docente-registro.html" class="clase-btn">Tomar Asistencia</a>
+                    <span class="badge badge-warning" style="display:inline-block; margin: 0.5rem 0;">⏳ Pendiente</span>
+                    <div style="margin-top: 0.5rem;">
+                        <a href="docente-registro.html" class="clase-btn">Iniciar Clase</a>
+                    </div>
                 </div>
             </div>
         </div>

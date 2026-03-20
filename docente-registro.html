@@ -26,104 +26,136 @@
         <div class="content-container">
             <div class="page-header">
                 <button onclick="history.back()" class="btn-back">← Volver</button>
-                <h2>✅ Registrar Asistencia de Clase</h2>
+                <h2>✅ Activar Asistencia de Clase</h2>
             </div>
-            
+
+            <!-- Información de la clase actual -->
             <div class="clase-info-card">
                 <h3>Información de la Clase</h3>
                 <div class="info-grid">
-                    <div class="info-item">
-                        <strong>Asignatura:</strong> Programación Web
-                    </div>
-                    <div class="info-item">
-                        <strong>Código:</strong> PW-301
-                    </div>
-                    <div class="info-item">
-                        <strong>Fecha:</strong> 09/03/2026
-                    </div>
-                    <div class="info-item">
-                        <strong>Hora:</strong> 8:00 AM - 10:00 AM
-                    </div>
-                    <div class="info-item">
-                        <strong>Salón:</strong> 301
-                    </div>
-                    <div class="info-item">
-                        <strong>Total Estudiantes:</strong> 35
-                    </div>
+                    <div class="info-item"><strong>Asignatura:</strong> Programación Web</div>
+                    <div class="info-item"><strong>Código:</strong> PW-301</div>
+                    <div class="info-item"><strong>Fecha:</strong> 09/03/2026</div>
+                    <div class="info-item"><strong>Hora:</strong> 8:00 AM - 10:00 AM</div>
+                    <div class="info-item"><strong>Salón:</strong> 301</div>
+                    <div class="info-item"><strong>Total Estudiantes:</strong> 35</div>
                 </div>
             </div>
 
-            <div class="asistencia-form">
-                <h3>Lista de Estudiantes</h3>
-                
-                <div class="search-box">
-                    <input type="text" placeholder="Buscar estudiante..." class="search-input">
+            <!-- Paso 1: El docente activa la asistencia -->
+            <!-- Al activar, el sistema envía una notificación a todos los estudiantes de la clase -->
+            <div class="asistencia-activar-card">
+                <div class="activar-icon">🔔</div>
+                <h3>Activar Registro de Asistencia</h3>
+                <p>Al activar la asistencia, el sistema enviará automáticamente una notificación a todos los estudiantes de esta clase para que confirmen su presencia.</p>
+
+                <!-- Configuración del tiempo disponible para que el estudiante responda -->
+                <div class="form-group" style="max-width: 300px; margin: 1.5rem auto;">
+                    <label>Tiempo disponible para los estudiantes</label>
+                    <select class="form-control">
+                        <option>5 minutos</option>
+                        <option selected>10 minutos</option>
+                        <option>15 minutos</option>
+                        <option>20 minutos</option>
+                    </select>
                 </div>
 
+                <!-- Botón principal para activar la asistencia -->
+                <button class="btn-activar" onclick="activarAsistencia()">
+                    🔔 Activar Asistencia y Notificar Estudiantes
+                </button>
+            </div>
+
+            <!-- Paso 2: Estado en tiempo real de respuestas de estudiantes -->
+            <!-- Esta sección muestra quién ha confirmado asistencia tras la notificación -->
+            <div class="asistencia-estado-card">
+                <div class="estado-header">
+                    <h3>Estado de Respuestas en Tiempo Real</h3>
+                    <!-- Indicador visual del estado de la sesión -->
+                    <span class="badge-estado badge-activo">🟢 Sesión Activa</span>
+                </div>
+
+                <!-- Barra de progreso de respuestas -->
+                <div class="progreso-respuestas">
+                    <p>Estudiantes que han confirmado: <strong>28 / 35</strong></p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                    <p class="tiempo-restante">⏱️ Tiempo restante: <strong>4:32</strong></p>
+                </div>
+
+                <!-- Tabla con el estado de cada estudiante -->
                 <div class="table-container">
                     <table class="data-table">
                         <thead>
                             <tr>
                                 <th>Código</th>
                                 <th>Nombre</th>
-                                <th>Presente</th>
-                                <th>Ausente</th>
-                                <th>Tardanza</th>
+                                <th>Estado</th>
+                                <th>Hora de Respuesta</th>
                                 <th>Observaciones</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- Estudiante que confirmó asistencia -->
                             <tr>
                                 <td>2021001</td>
                                 <td>Juan Pérez</td>
-                                <td><input type="radio" name="est1" checked></td>
-                                <td><input type="radio" name="est1"></td>
-                                <td><input type="radio" name="est1"></td>
-                                <td><input type="text" class="obs-input"></td>
+                                <td><span class="badge badge-success">✅ Confirmó</span></td>
+                                <td>8:03 AM</td>
+                                <td>-</td>
                             </tr>
+                            <!-- Estudiante que confirmó asistencia -->
                             <tr>
                                 <td>2021002</td>
                                 <td>María González</td>
-                                <td><input type="radio" name="est2" checked></td>
-                                <td><input type="radio" name="est2"></td>
-                                <td><input type="radio" name="est2"></td>
-                                <td><input type="text" class="obs-input"></td>
+                                <td><span class="badge badge-success">✅ Confirmó</span></td>
+                                <td>8:05 AM</td>
+                                <td>-</td>
                             </tr>
+                            <!-- Estudiante que aún no ha respondido -->
                             <tr>
                                 <td>2021003</td>
                                 <td>Carlos Rodríguez</td>
-                                <td><input type="radio" name="est3"></td>
-                                <td><input type="radio" name="est3" checked></td>
-                                <td><input type="radio" name="est3"></td>
-                                <td><input type="text" class="obs-input" placeholder="Justificado"></td>
+                                <td><span class="badge badge-warning">⏳ Pendiente</span></td>
+                                <td>-</td>
+                                <td>-</td>
                             </tr>
+                            <!-- Estudiante que confirmó asistencia -->
                             <tr>
                                 <td>2021004</td>
                                 <td>Ana Martínez</td>
-                                <td><input type="radio" name="est4" checked></td>
-                                <td><input type="radio" name="est4"></td>
-                                <td><input type="radio" name="est4"></td>
-                                <td><input type="text" class="obs-input"></td>
+                                <td><span class="badge badge-success">✅ Confirmó</span></td>
+                                <td>8:02 AM</td>
+                                <td>-</td>
                             </tr>
+                            <!-- Estudiante que no respondió a tiempo -->
                             <tr>
                                 <td>2021005</td>
                                 <td>Luis Sánchez</td>
-                                <td><input type="radio" name="est5"></td>
-                                <td><input type="radio" name="est5"></td>
-                                <td><input type="radio" name="est5" checked></td>
-                                <td><input type="text" class="obs-input" placeholder="10 minutos"></td>
+                                <td><span class="badge badge-danger">❌ No respondió</span></td>
+                                <td>-</td>
+                                <td><input type="text" class="obs-input" placeholder="Agregar nota..."></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
+                <!-- Botones para finalizar o cancelar la sesión de asistencia -->
                 <div class="form-actions">
-                    <button class="btn-primary">Guardar Asistencia</button>
-                    <button class="btn-secondary">Cancelar</button>
+                    <button class="btn-primary">Finalizar y Guardar Asistencia</button>
+                    <button class="btn-secondary">Cancelar Sesión</button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Script que simula la activación de asistencia y el envío de notificaciones -->
+    <script>
+        function activarAsistencia() {
+            alert('✅ Asistencia activada.\n\n🔔 Notificación enviada a 35 estudiantes.\n\nLos estudiantes tienen 10 minutos para confirmar su asistencia.');
+        }
+    </script>
 
     <footer>
         <div class="footer-content">

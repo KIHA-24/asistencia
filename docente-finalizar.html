@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Clase - ASISTE-UNILIBRE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">ASISTE-UNILIBRE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="docente.html">Dashboard</a></li>
+                <li><a href="perfil.html">Mi Perfil</a></li>
+                <li><a href="notificaciones.html">Notificaciones</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content-section">
+        <div class="content-container">
+            <div class="page-header">
+                <button onclick="history.back()" class="btn-back">← Volver</button>
+                <h2>⏹️ Finalizar Clase</h2>
+            </div>
+
+            <!-- Resumen de la clase activa antes de finalizar -->
+            <div class="clase-info-card">
+                <h3>Clase en Curso</h3>
+                <div class="info-grid">
+                    <div class="info-item"><strong>Asignatura:</strong> Programación Web</div>
+                    <div class="info-item"><strong>Código:</strong> PW-301</div>
+                    <div class="info-item"><strong>Fecha:</strong> 09/03/2026</div>
+                    <div class="info-item"><strong>Hora Inicio:</strong> 8:00 AM</div>
+                    <div class="info-item"><strong>Salón:</strong> 301</div>
+                    <div class="info-item"><strong>Estado:</strong> <span class="badge badge-success">🟢 Activa</span></div>
+                </div>
+            </div>
+
+            <!-- Resumen de asistencia antes de finalizar -->
+            <div class="asistencia-estado-card">
+                <h3>Resumen de Asistencia</h3>
+                <div class="stats-grid" style="margin-top: 1.5rem;">
+                    <div class="stat-card">
+                        <div class="stat-number">35</div>
+                        <div class="stat-label">Total Estudiantes</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #28a745;">30</div>
+                        <div class="stat-label">Confirmaron Asistencia</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #dc3545;">3</div>
+                        <div class="stat-label">No Respondieron</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #ffc107;">2</div>
+                        <div class="stat-label">Pendientes</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Observaciones antes de finalizar -->
+            <div class="reporte-form-card">
+                <h3>Observaciones de la Clase</h3>
+                <div class="form-group">
+                    <label>Notas adicionales (opcional)</label>
+                    <textarea class="form-control" rows="4" placeholder="Ej: Clase normal, sin novedades..."></textarea>
+                </div>
+
+                <!-- Opciones para los estudiantes que no respondieron -->
+                <div class="form-group">
+                    <label>Marcar estudiantes sin respuesta como:</label>
+                    <select class="form-control">
+                        <option value="ausente">Ausente</option>
+                        <option value="justificado">Justificado</option>
+                    </select>
+                </div>
+
+                <!-- Botones de acción -->
+                <div class="form-actions">
+                    <button class="btn-primary" onclick="finalizarClase()">⏹️ Finalizar y Guardar Clase</button>
+                    <button class="btn-secondary" onclick="history.back()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script que simula la finalización de la clase -->
+    <script>
+        function finalizarClase() {
+            const confirmacion = confirm('¿Estás seguro de que deseas finalizar la clase?\n\nEsta acción bloqueará nuevos registros de asistencia.');
+            if (confirmacion) {
+                alert('✅ Clase finalizada correctamente.\n\nLa asistencia ha sido guardada y los registros han sido bloqueados.');
+                window.location.href = 'docente.html';
+            }
+        }
+    </script>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 ASISTE-UNILIBRE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -30,7 +30,22 @@
             </div>
             
             <div class="notifications-list">
-                <div class="notification-item notification-info">
+                <!-- Notificación urgente: el docente activó la asistencia -->
+                <!-- El estudiante debe confirmar su presencia antes de que expire el tiempo -->
+                <div class="notification-item notification-warning unread">
+                    <div class="notification-icon">🔔</div>
+                    <div class="notification-content">
+                        <h4>¡Tomar Asistencia Ahora!</h4>
+                        <p>El profesor García ha activado la asistencia para <strong>Programación Web</strong>. Tienes <strong>8 minutos</strong> para confirmar tu presencia.</p>
+                        <span class="notification-time">Hace 2 minutos</span>
+                        <!-- Botón para que el estudiante confirme su asistencia -->
+                        <div style="margin-top: 1rem;">
+                            <button class="btn-primary" onclick="confirmarAsistencia()">✅ Confirmar Asistencia</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notification-item notification-info unread">
                     <div class="notification-icon">ℹ️</div>
                     <div class="notification-content">
                         <h4>Clase Programada</h4>
@@ -42,8 +57,8 @@
                 <div class="notification-item notification-success">
                     <div class="notification-icon">✅</div>
                     <div class="notification-content">
-                        <h4>Asistencia Registrada</h4>
-                        <p>Tu asistencia a Base de Datos ha sido registrada correctamente</p>
+                        <h4>Asistencia Confirmada</h4>
+                        <p>Tu asistencia a <strong>Base de Datos</strong> fue confirmada correctamente</p>
                         <span class="notification-time">Ayer</span>
                     </div>
                 </div>
@@ -77,6 +92,13 @@
             </div>
         </div>
     </section>
+
+    <!-- Script que simula la confirmación de asistencia por parte del estudiante -->
+    <script>
+        function confirmarAsistencia() {
+            alert('✅ Asistencia confirmada exitosamente.\n\nTu presencia en Programación Web ha sido registrada.');
+        }
+    </script>
 
     <footer>
         <div class="footer-content">

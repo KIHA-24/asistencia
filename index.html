@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sistema de control de asistencia digital para la Universidad Libre">
     <meta name="keywords" content="asistencia, universidad, control, estudiantes, docentes">
+
+    <!-- ========================================
+         DUBLIN CORE METADATA
+         Estándar internacional de metadatos
+         ======================================== -->
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <meta name="DC.title"       content="ASISTE-UNILIBRE - Sistema de Control de Asistencia">
+    <meta name="DC.creator"     content="Kevin, Miguel, Andrés">
+    <meta name="DC.subject"     content="Control de asistencia, Universidad Libre, Docentes, Estudiantes, Gestión académica">
+    <meta name="DC.description" content="Sistema de información desarrollado para la Universidad Libre que permite llevar el control de asistencia de docentes y estudiantes de manera digital y organizada">
+    <meta name="DC.publisher"   content="Universidad Libre Seccional Cúcuta">
+    <meta name="DC.date"        content="2024">
+    <meta name="DC.type"        content="Software">
+    <meta name="DC.format"      content="text/html">
+    <meta name="DC.identifier"  content="https://asiste-unilibre.edu.co">
+    <meta name="DC.language"    content="es">
+    <meta name="DC.rights"      content="© 2024 Universidad Libre Seccional Cúcuta. Todos los derechos reservados.">
+    <meta name="DC.coverage"    content="Cúcuta, Norte de Santander, Colombia">
     <title>ASISTE-UNILIBRE | Sistema de Control de Asistencia</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -71,77 +89,6 @@
                 <h3>Gestión en Tiempo Real</h3>
                 <p>Actualización inmediata de registros y sincronización automática</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Sección de tipos de usuarios -->
-    <section id="usuarios" class="users">
-        <h2>Tipos de Usuario</h2>
-        <div class="user-grid">
-            <div class="user-card">
-                <div class="user-icon">👨‍💼</div>
-                <h3>Administrador</h3>
-                <ul>
-                    <li>Crear y gestionar usuarios</li>
-                    <li>Administrar periodos académicos</li>
-                    <li>Configurar horarios y asignaturas</li>
-                    <li>Generar reportes generales</li>
-                    <li>Control total del sistema</li>
-                </ul>
-                <a href="administrador.html" class="dashboard-btn" style="margin-top: 1rem;">Acceso Directo</a>
-            </div>
-            <div class="user-card">
-                <div class="user-icon">👨‍🏫</div>
-                <h3>Docente</h3>
-                <ul>
-                    <li>Registrar asistencia de clase</li>
-                    <li>Consultar historial de asistencias</li>
-                    <li>Finalizar clases</li>
-                    <li>Ver reportes de sus asignaturas</li>
-                    <li>Gestionar horarios</li>
-                </ul>
-                <a href="docente.html" class="dashboard-btn" style="margin-top: 1rem;">Acceso Directo</a>
-            </div>
-            <div class="user-card">
-                <div class="user-icon">👨‍🎓</div>
-                <h3>Estudiante</h3>
-                <ul>
-                    <li>Consultar asistencias personales</li>
-                    <li>Registrar asistencia a clase</li>
-                    <li>Ver historial académico</li>
-                    <li>Recibir notificaciones</li>
-                    <li>Acceso a reportes propios</li>
-                </ul>
-                <a href="estudiante.html" class="dashboard-btn" style="margin-top: 1rem;">Acceso Directo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de acceso al sistema -->
-    <section id="acceso" class="login-section">
-        <h2>Acceso al Sistema</h2>
-        <div class="login-container">
-            <form class="login-form">
-                <div class="form-group">
-                    <label for="usuario">Usuario</label>
-                    <input type="text" id="usuario" placeholder="Ingrese su usuario institucional" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" placeholder="Ingrese su contraseña" required>
-                </div>
-                <div class="form-group">
-                    <label for="rol">Tipo de Usuario</label>
-                    <select id="rol" required>
-                        <option value="">Seleccione...</option>
-                        <option value="admin">Administrador</option>
-                        <option value="docente">Docente</option>
-                        <option value="estudiante">Estudiante</option>
-                    </select>
-                </div>
-                <button type="submit" class="login-button">Ingresar al Sistema</button>
-                <a href="#" class="forgot-password">¿Olvidó su contraseña?</a>
-            </form>
         </div>
     </section>
 
