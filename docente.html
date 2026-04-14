@@ -6,13 +6,15 @@
     <meta name="description" content="Dashboard del Docente - ASISTE-UNILIBRE">
     <title>Dashboard Docente - ASISTE-UNILIBRE</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome: librería de iconos profesionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <!-- Encabezado con navegación principal -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <span class="logo-icon">📚</span>
+                <span class="logo-icon"><i class="fas fa-book-open"></i></span>
                 <span class="logo-text">ASISTE-UNILIBRE</span>
             </div>
             <ul class="nav-links">
@@ -27,7 +29,7 @@
     <!-- Sección de bienvenida -->
     <section class="dashboard-hero">
         <div class="dashboard-welcome">
-            <h1>👨‍🏫 Bienvenido, Profesor</h1>
+            <h1><i class="fas fa-chalkboard-teacher"></i> Bienvenido, Profesor</h1>
             <p>Panel de Control Docente - ASISTE-UNILIBRE</p>
         </div>
     </section>
@@ -36,51 +38,39 @@
     <section class="dashboard-section">
         <div class="dashboard-container">
             <h2>Mis Funciones</h2>
-            
             <div class="dashboard-grid">
-                <!-- Iniciar Clase -->
                 <div class="dashboard-card">
-                    <div class="dashboard-icon">▶️</div>
+                    <div class="dashboard-icon"><i class="fas fa-play-circle"></i></div>
                     <h3>Iniciar Clase</h3>
                     <p>Iniciar sesión de clase y activar registro de asistencia</p>
                     <a href="docente-registro.html" class="dashboard-btn">Iniciar</a>
                 </div>
-
-                <!-- Finalizar Clase -->
                 <div class="dashboard-card">
-                    <div class="dashboard-icon">⏹️</div>
+                    <div class="dashboard-icon"><i class="fas fa-stop-circle"></i></div>
                     <h3>Finalizar Clase</h3>
                     <p>Cerrar la sesión activa y bloquear nuevos registros</p>
                     <a href="docente-finalizar.html" class="dashboard-btn">Finalizar</a>
                 </div>
-
-                <!-- Registrar Asistencia -->
                 <div class="dashboard-card">
-                    <div class="dashboard-icon">✅</div>
+                    <div class="dashboard-icon"><i class="fas fa-clipboard-check"></i></div>
                     <h3>Activar Asistencia</h3>
                     <p>Notificar a estudiantes para que confirmen su presencia</p>
                     <a href="docente-registro.html" class="dashboard-btn">Acceder</a>
                 </div>
-
-                <!-- Historial de Clases -->
                 <div class="dashboard-card">
-                    <div class="dashboard-icon">📋</div>
+                    <div class="dashboard-icon"><i class="fas fa-history"></i></div>
                     <h3>Historial de Clases</h3>
                     <p>Ver historial de asistencias registradas</p>
                     <a href="docente-historial.html" class="dashboard-btn">Acceder</a>
                 </div>
-
-                <!-- Reportes -->
                 <div class="dashboard-card">
-                    <div class="dashboard-icon">📊</div>
+                    <div class="dashboard-icon"><i class="fas fa-chart-bar"></i></div>
                     <h3>Mis Reportes</h3>
                     <p>Generar reportes de asignaturas</p>
                     <a href="docente-reportes.html" class="dashboard-btn">Acceder</a>
                 </div>
-
-                <!-- Notificaciones -->
                 <div class="dashboard-card">
-                    <div class="dashboard-icon">🔔</div>
+                    <div class="dashboard-icon"><i class="fas fa-bell"></i></div>
                     <h3>Notificaciones</h3>
                     <p>Ver alertas y mensajes del sistema</p>
                     <a href="notificaciones.html" class="dashboard-btn">Acceder</a>
@@ -94,25 +84,23 @@
         <div class="stats-container">
             <h2>Mis Clases de Hoy</h2>
             <div class="clases-grid">
-                <!-- Clase con sesión activa -->
                 <div class="clase-card">
                     <h3>Programación Web</h3>
-                    <p>⏰ 8:00 AM - 10:00 AM</p>
-                    <p>📍 Salón 301</p>
-                    <p>👥 35 estudiantes</p>
-                    <span class="badge badge-success" style="display:inline-block; margin: 0.5rem 0;">🟢 Clase Activa</span>
+                    <p><i class="fas fa-clock"></i> 8:00 AM - 10:00 AM</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Salón 301</p>
+                    <p><i class="fas fa-users"></i> 35 estudiantes</p>
+                    <span class="badge badge-success" style="display:inline-block; margin: 0.5rem 0;">Clase Activa</span>
                     <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
                         <a href="docente-registro.html" class="clase-btn">Activar Asistencia</a>
                         <a href="docente-finalizar.html" class="clase-btn" style="background: #8b0000;">Finalizar</a>
                     </div>
                 </div>
-                <!-- Clase pendiente de iniciar -->
                 <div class="clase-card">
                     <h3>Base de Datos</h3>
-                    <p>⏰ 2:00 PM - 4:00 PM</p>
-                    <p>📍 Salón 205</p>
-                    <p>👥 28 estudiantes</p>
-                    <span class="badge badge-warning" style="display:inline-block; margin: 0.5rem 0;">⏳ Pendiente</span>
+                    <p><i class="fas fa-clock"></i> 2:00 PM - 4:00 PM</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Salón 205</p>
+                    <p><i class="fas fa-users"></i> 28 estudiantes</p>
+                    <span class="badge badge-warning" style="display:inline-block; margin: 0.5rem 0;">Pendiente</span>
                     <div style="margin-top: 0.5rem;">
                         <a href="docente-registro.html" class="clase-btn">Iniciar Clase</a>
                     </div>
@@ -137,10 +125,10 @@
             
             <h2>Síguenos en Redes Sociales</h2>
             <div class="social-links">
-                <a href="https://www.facebook.com/unilibre" target="_blank" class="social-icon">📘 Facebook</a>
-                <a href="https://www.instagram.com/unilibre" target="_blank" class="social-icon">📷 Instagram</a>
-                <a href="https://twitter.com/unilibre" target="_blank" class="social-icon">🐦 Twitter</a>
-                <a href="https://www.youtube.com/unilibre" target="_blank" class="social-icon">📺 YouTube</a>
+                <a href="https://www.facebook.com/unilibre" target="_blank" class="social-icon"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://www.instagram.com/unilibre" target="_blank" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://twitter.com/unilibre" target="_blank" class="social-icon"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://www.youtube.com/unilibre" target="_blank" class="social-icon"><i class="fab fa-youtube"></i> YouTube</a>
             </div>
             
             <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>

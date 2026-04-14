@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Perfil - ASISTE-UNILIBRE</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome: librería de iconos profesionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <span class="logo-icon">📚</span>
+                <span class="logo-icon"><i class="fas fa-book-open"></i></span>
                 <span class="logo-text">ASISTE-UNILIBRE</span>
             </div>
             <ul class="nav-links">
@@ -25,14 +27,14 @@
     <section class="content-section">
         <div class="content-container">
             <div class="page-header">
-                <button onclick="history.back()" class="btn-back">← Volver</button>
-                <h2>👤 Mi Perfil</h2>
+                <button onclick="history.back()" class="btn-back"><i class="fas fa-arrow-left"></i> Volver</button>
+                <h2><i class="fas fa-user-circle"></i> Mi Perfil</h2>
             </div>
             
             <div class="perfil-container">
                 <div class="perfil-sidebar">
                     <div class="perfil-avatar">
-                        <div class="avatar-circle">👤</div>
+                        <div class="avatar-circle"><i class="fas fa-user"></i></div>
                         <button class="btn-small">Cambiar Foto</button>
                     </div>
                     <div class="perfil-info">
@@ -79,18 +81,23 @@
 
                     <div class="perfil-section">
                         <h3>Cambiar Contraseña</h3>
-                        <form class="perfil-form">
+                        <!-- Mensaje de éxito al guardar -->
+                        <div id="msg-password" style="display:none;" class="form-error-msg" style="background:#d4edda; color:#155724; border-color:#c3e6cb;"></div>
+                        <form class="perfil-form" onsubmit="return validarPassword()">
                             <div class="form-group">
                                 <label>Contraseña Actual</label>
-                                <input type="password" class="form-control">
+                                <input type="password" id="pass-actual" class="form-control">
+                                <span class="field-error" id="error-pass-actual"></span>
                             </div>
                             <div class="form-group">
                                 <label>Nueva Contraseña</label>
-                                <input type="password" class="form-control">
+                                <input type="password" id="pass-nueva" class="form-control">
+                                <span class="field-error" id="error-pass-nueva"></span>
                             </div>
                             <div class="form-group">
                                 <label>Confirmar Nueva Contraseña</label>
-                                <input type="password" class="form-control">
+                                <input type="password" id="pass-confirmar" class="form-control">
+                                <span class="field-error" id="error-pass-confirmar"></span>
                             </div>
                             <button type="submit" class="btn-primary">Cambiar Contraseña</button>
                         </form>
@@ -99,6 +106,86 @@
             </div>
         </div>
     </section>
+
+    <script>
+        /**
+         * Muestra un error en un campo del formulario de contraseña
+         * @param {string} id - ID del campo
+         * @param {string} msg - Mensaje de error
+         */
+        function errorPass(id, msg) {
+            document.getElementById(id).classList.add('input-error');
+            document.getElementById('error-' + id).textContent = msg;
+        }
+
+        /**
+         * Limpia el error de un campo del formulario de contraseña
+         * @param {string} id - ID del campo a limpiar
+         */
+        function limpiarPass(id) {
+            document.getElementById(id).classList.remove('input-error');
+            document.getElementById('error-' + id).textContent = '';
+        }
+
+        /**
+         * Valida el formulario de cambio de contraseña:
+         * - Verifica que la contraseña actual no esté vacía
+         * - Verifica que la nueva contraseña tenga al menos 6 caracteres
+         * - Verifica que la confirmación coincida con la nueva contraseña
+         * @returns {boolean} false para prevenir el envío nativo
+         */
+        function validarPassword() {
+            ['pass-actual', 'pass-nueva', 'pass-confirmar'].forEach(limpiarPass);
+            document.getElementById('msg-password').style.display = 'none';
+
+            const actual    = document.getElementById('pass-actual').value;
+            const nueva     = document.getElementById('pass-nueva').value;
+            const confirmar = document.getElementById('pass-confirmar').value;
+            let valido      = true;
+
+            if (!actual) {
+                errorPass('pass-actual', 'Ingrese su contraseña actual.');
+                valido = false;
+            }
+
+            if (!nueva) {
+                errorPass('pass-nueva', 'Ingrese la nueva contraseña.');
+                valido = false;
+            } else if (nueva.length < 6) {
+                errorPass('pass-nueva', 'La contraseña debe tener al menos 6 caracteres.');
+                valido = false;
+            }
+
+            if (!confirmar) {
+                errorPass('pass-confirmar', 'Confirme la nueva contraseña.');
+                valido = false;
+            } else if (nueva !== confirmar) {
+                errorPass('pass-confirmar', 'Las contraseñas no coinciden.');
+                valido = false;
+            }
+
+            // Mostrar mensaje de éxito si todo es válido
+            if (valido) {
+                const msg = document.getElementById('msg-password');
+                msg.textContent    = '✓ Contraseña actualizada correctamente.';
+                msg.style.display  = 'block';
+                msg.style.background = '#d4edda';
+                msg.style.color      = '#155724';
+                msg.style.border     = '1px solid #c3e6cb';
+                // Limpiar campos
+                ['pass-actual', 'pass-nueva', 'pass-confirmar'].forEach(id => {
+                    document.getElementById(id).value = '';
+                });
+            }
+
+            return false;
+        }
+
+        // Limpiar errores en tiempo real
+        ['pass-actual', 'pass-nueva', 'pass-confirmar'].forEach(id => {
+            document.getElementById(id).addEventListener('input', () => limpiarPass(id));
+        });
+    </script>
 
     <footer>
         <div class="footer-content">

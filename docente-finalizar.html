@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finalizar Clase - ASISTE-UNILIBRE</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome: librería de iconos profesionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <span class="logo-icon">📚</span>
+                <span class="logo-icon"><i class="fas fa-book-open"></i></span>
                 <span class="logo-text">ASISTE-UNILIBRE</span>
             </div>
             <ul class="nav-links">
@@ -25,8 +27,8 @@
     <section class="content-section">
         <div class="content-container">
             <div class="page-header">
-                <button onclick="history.back()" class="btn-back">← Volver</button>
-                <h2>⏹️ Finalizar Clase</h2>
+                <button onclick="history.back()" class="btn-back"><i class="fas fa-arrow-left"></i> Volver</button>
+                <h2><i class="fas fa-stop-circle"></i> Finalizar Clase</h2>
             </div>
 
             <!-- Resumen de la clase activa antes de finalizar -->
@@ -38,7 +40,7 @@
                     <div class="info-item"><strong>Fecha:</strong> 09/03/2026</div>
                     <div class="info-item"><strong>Hora Inicio:</strong> 8:00 AM</div>
                     <div class="info-item"><strong>Salón:</strong> 301</div>
-                    <div class="info-item"><strong>Estado:</strong> <span class="badge badge-success">🟢 Activa</span></div>
+                    <div class="info-item"><strong>Estado:</strong> <span class="badge badge-success"><i class="fas fa-circle"></i> Activa</span></div>
                 </div>
             </div>
 
@@ -84,23 +86,41 @@
 
                 <!-- Botones de acción -->
                 <div class="form-actions">
-                    <button class="btn-primary" onclick="finalizarClase()">⏹️ Finalizar y Guardar Clase</button>
+                    <button class="btn-primary" onclick="mostrarModalFinalizar()"><i class="fas fa-stop-circle"></i> Finalizar y Guardar Clase</button>
                     <button class="btn-secondary" onclick="history.back()">Cancelar</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Script que simula la finalización de la clase -->
-    <script>
-        function finalizarClase() {
-            const confirmacion = confirm('¿Estás seguro de que deseas finalizar la clase?\n\nEsta acción bloqueará nuevos registros de asistencia.');
-            if (confirmacion) {
-                alert('✅ Clase finalizada correctamente.\n\nLa asistencia ha sido guardada y los registros han sido bloqueados.');
-                window.location.href = 'docente.html';
-            }
-        }
-    </script>
+    <!-- Modal de confirmación para finalizar clase -->
+    <div id="modal-finalizar" class="modal-overlay" style="display:none;">
+        <div class="modal-box">
+            <div class="modal-icon"><i class="fas fa-exclamation-triangle" style="color:#ffc107; font-size:3rem;"></i></div>
+            <h3>¿Finalizar la clase?</h3>
+            <p>Esta acción bloqueará nuevos registros de asistencia. Los estudiantes que no respondieron serán marcados según la opción seleccionada.</p>
+            <div class="modal-actions">
+                <button class="btn-primary" onclick="confirmarFinalizar()"><i class="fas fa-check"></i> Sí, finalizar</button>
+                <button class="btn-secondary" onclick="cerrarModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mensaje de éxito tras finalizar -->
+    <div id="modal-exito" class="modal-overlay" style="display:none;">
+        <div class="modal-box">
+            <div class="modal-icon"><i class="fas fa-check-circle" style="color:#28a745; font-size:3rem;"></i></div>
+            <h3>Clase finalizada</h3>
+            <p>La asistencia ha sido guardada y los registros han sido bloqueados correctamente.</p>
+            <div class="modal-actions">
+                <button class="btn-primary" onclick="window.location.href='docente.html'">
+                    <i class="fas fa-home"></i> Volver al Dashboard
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="docente-finalizar.js"></script>
 
     <footer>
         <div class="footer-content">

@@ -189,6 +189,7 @@ body {
 .icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--color-primary);
 }
 
 .feature-card h3 {
@@ -241,8 +242,9 @@ body {
 }
 
 .user-icon {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
+    color: var(--color-primary);
     margin-bottom: 1rem;
 }
 
@@ -647,8 +649,9 @@ footer {
 }
 
 .dashboard-icon {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--color-primary);
 }
 
 .dashboard-card h3 {
@@ -1133,7 +1136,10 @@ footer {
 }
 
 .notification-icon {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    min-width: 2rem;
+    text-align: center;
 }
 
 .notification-content {
@@ -1305,7 +1311,8 @@ footer {
 }
 
 .reporte-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    color: var(--color-primary);
 }
 
 .reporte-info {
@@ -1402,7 +1409,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5rem;
+    font-size: 4rem;
+    color: var(--color-primary);
     margin: 0 auto 1rem;
 }
 
@@ -1517,8 +1525,9 @@ footer {
 }
 
 .reporte-tipo-card .reporte-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: var(--color-primary);
 }
 
 .reporte-tipo-card h4 {
@@ -1732,4 +1741,141 @@ footer {
         width: 100%;
         justify-content: center;
     }
+}
+
+/* ========================================
+   ACTIVACIÓN DE ASISTENCIA (DOCENTE)
+   ======================================== */
+
+/* Tarjeta principal para activar la sesión de asistencia */
+.asistencia-activar-card {
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 2rem;
+    border: 2px solid var(--color-primary);
+}
+
+.activar-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.asistencia-activar-card h3 {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.asistencia-activar-card p {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Botón grande para activar la asistencia */
+.btn-activar {
+    margin-top: 1.5rem;
+    padding: 1.2rem 3rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-activar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(196, 30, 58, 0.4);
+}
+
+/* Tarjeta de estado en tiempo real de respuestas */
+.asistencia-estado-card {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.estado-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.estado-header h3 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Badge de estado de la sesión */
+.badge-estado {
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.badge-activo {
+    background: #d4edda;
+    color: #155724;
+}
+
+/* Barra de progreso de respuestas de estudiantes */
+.progreso-respuestas {
+    background: var(--color-background-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.progreso-respuestas p {
+    margin: 0.5rem 0;
+    color: var(--color-text);
+}
+
+.tiempo-restante {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+}
+
+/* ========================================
+   VALIDACIÓN DE FORMULARIOS (JavaScript)
+   ======================================== */
+
+/* Mensaje de error debajo de cada campo */
+.field-error {
+    display: block;
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    min-height: 1.1rem;
+}
+
+/* Borde rojo en campos con error */
+.input-error {
+    border-color: #dc3545 !important;
+    background-color: #fff5f5;
+}
+
+/* Mensaje de error general del formulario */
+.form-error-msg {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
 }

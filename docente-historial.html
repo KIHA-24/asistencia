@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historial de Clases - ASISTE-UNILIBRE</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome: librería de iconos profesionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <span class="logo-icon">📚</span>
+                <span class="logo-icon"><i class="fas fa-book-open"></i></span>
                 <span class="logo-text">ASISTE-UNILIBRE</span>
             </div>
             <ul class="nav-links">
@@ -25,15 +27,15 @@
     <section class="content-section">
         <div class="content-container">
             <div class="page-header">
-                <button onclick="history.back()" class="btn-back">← Volver</button>
-                <h2>📋 Historial de Clases</h2>
+                <button onclick="history.back()" class="btn-back"><i class="fas fa-arrow-left"></i> Volver</button>
+                <h2><i class="fas fa-history"></i> Historial de Clases</h2>
             </div>
             
             <div class="filter-section">
-                <select class="filter-select">
-                    <option>Todas las Asignaturas</option>
-                    <option>Programación Web</option>
-                    <option>Base de Datos</option>
+                <select class="filter-select" id="filtro-asignatura" onchange="filtrarHistorial()">
+                    <option value="">Todas las Asignaturas</option>
+                    <option value="Programación Web">Programación Web</option>
+                    <option value="Base de Datos">Base de Datos</option>
                 </select>
                 <select class="filter-select">
                     <option>Este Mes</option>
@@ -42,8 +44,13 @@
                 </select>
             </div>
 
+            <!-- Mensaje cuando no hay resultados -->
+            <p id="sin-resultados" style="display:none; text-align:center; color:#888; padding:2rem;">
+                <i class="fas fa-filter"></i> No hay clases registradas con ese filtro.
+            </p>
+
             <div class="clases-historial">
-                <div class="historial-card">
+                <div class="historial-card" data-asignatura="Programación Web">
                     <div class="historial-header">
                         <h3>Programación Web - PW-301</h3>
                         <span class="fecha-badge">09/03/2026</span>
@@ -52,10 +59,10 @@
                         <p><strong>Hora:</strong> 8:00 AM - 10:00 AM</p>
                         <p><strong>Salón:</strong> 301</p>
                         <div class="stats-inline">
-                            <span class="stat-item">👥 35 estudiantes</span>
-                            <span class="stat-item">✅ 32 presentes</span>
-                            <span class="stat-item">❌ 2 ausentes</span>
-                            <span class="stat-item">⏰ 1 tardanza</span>
+                            <span class="stat-item"><i class="fas fa-users"></i> 35 estudiantes</span>
+                            <span class="stat-item"><i class="fas fa-check-circle"></i> 32 presentes</span>
+                            <span class="stat-item"><i class="fas fa-times-circle"></i> 2 ausentes</span>
+                            <span class="stat-item"><i class="fas fa-clock"></i> 1 tardanza</span>
                         </div>
                     </div>
                     <div class="historial-footer">
@@ -64,7 +71,7 @@
                     </div>
                 </div>
 
-                <div class="historial-card">
+                <div class="historial-card" data-asignatura="Base de Datos">
                     <div class="historial-header">
                         <h3>Base de Datos - BD-205</h3>
                         <span class="fecha-badge">08/03/2026</span>
@@ -73,10 +80,10 @@
                         <p><strong>Hora:</strong> 2:00 PM - 4:00 PM</p>
                         <p><strong>Salón:</strong> 205</p>
                         <div class="stats-inline">
-                            <span class="stat-item">👥 28 estudiantes</span>
-                            <span class="stat-item">✅ 26 presentes</span>
-                            <span class="stat-item">❌ 1 ausente</span>
-                            <span class="stat-item">⏰ 1 tardanza</span>
+                            <span class="stat-item"><i class="fas fa-users"></i> 28 estudiantes</span>
+                            <span class="stat-item"><i class="fas fa-check-circle"></i> 26 presentes</span>
+                            <span class="stat-item"><i class="fas fa-times-circle"></i> 1 ausente</span>
+                            <span class="stat-item"><i class="fas fa-clock"></i> 1 tardanza</span>
                         </div>
                     </div>
                     <div class="historial-footer">
@@ -85,7 +92,7 @@
                     </div>
                 </div>
 
-                <div class="historial-card">
+                <div class="historial-card" data-asignatura="Programación Web">
                     <div class="historial-header">
                         <h3>Programación Web - PW-301</h3>
                         <span class="fecha-badge">06/03/2026</span>
@@ -94,10 +101,10 @@
                         <p><strong>Hora:</strong> 8:00 AM - 10:00 AM</p>
                         <p><strong>Salón:</strong> 301</p>
                         <div class="stats-inline">
-                            <span class="stat-item">👥 35 estudiantes</span>
-                            <span class="stat-item">✅ 33 presentes</span>
-                            <span class="stat-item">❌ 2 ausentes</span>
-                            <span class="stat-item">⏰ 0 tardanzas</span>
+                            <span class="stat-item"><i class="fas fa-users"></i> 35 estudiantes</span>
+                            <span class="stat-item"><i class="fas fa-check-circle"></i> 33 presentes</span>
+                            <span class="stat-item"><i class="fas fa-times-circle"></i> 2 ausentes</span>
+                            <span class="stat-item"><i class="fas fa-clock"></i> 0 tardanzas</span>
                         </div>
                     </div>
                     <div class="historial-footer">
@@ -108,6 +115,8 @@
             </div>
         </div>
     </section>
+
+    <script src="docente-historial.js"></script>
 
     <footer>
         <div class="footer-content">

@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notificaciones - ASISTE-UNILIBRE</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome: librería de iconos profesionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <span class="logo-icon">📚</span>
+                <span class="logo-icon"><i class="fas fa-book-open"></i></span>
                 <span class="logo-text">ASISTE-UNILIBRE</span>
             </div>
             <ul class="nav-links">
@@ -25,82 +27,88 @@
     <section class="content-section">
         <div class="content-container">
             <div class="page-header">
-                <button onclick="history.back()" class="btn-back">← Volver</button>
-                <h2>🔔 Centro de Notificaciones</h2>
+                <button onclick="history.back()" class="btn-back"><i class="fas fa-arrow-left"></i> Volver</button>
+                <h2><i class="fas fa-bell"></i> Centro de Notificaciones</h2>
             </div>
             
+            <!-- Contador de no leídas y controles de filtro -->
             <div class="notif-actions">
-                <button class="btn-small">Marcar todas como leídas</button>
-                <select class="filter-select">
-                    <option>Todas</option>
-                    <option>No leídas</option>
-                    <option>Leídas</option>
+                <button class="btn-small" onclick="marcarTodasLeidas()">
+                    <i class="fas fa-check-double"></i> Marcar todas como leídas
+                </button>
+                <span id="contador-no-leidas" class="badge badge-danger" style="padding: 0.4rem 0.8rem;"></span>
+                <select class="filter-select" id="filtro-notif" onchange="filtrarNotificaciones()">
+                    <option value="todas">Todas</option>
+                    <option value="no-leidas">No leídas</option>
+                    <option value="leidas">Leídas</option>
                 </select>
             </div>
 
             <div class="notifications-list">
                 <div class="notification-item notification-info unread">
-                    <div class="notification-icon">ℹ️</div>
+                    <div class="notification-icon"><i class="fas fa-tools"></i></div>
                     <div class="notification-content">
                         <h4>Actualización del Sistema</h4>
                         <p>El sistema estará en mantenimiento el próximo sábado de 2:00 AM a 6:00 AM</p>
                         <span class="notification-time">Hace 1 hora</span>
                     </div>
-                    <button class="btn-close">✕</button>
+                    <button class="btn-close"><i class="fas fa-times"></i></button>
                 </div>
 
                 <div class="notification-item notification-success unread">
-                    <div class="notification-icon">✅</div>
+                    <div class="notification-icon"><i class="fas fa-check-circle"></i></div>
                     <div class="notification-content">
                         <h4>Asistencia Registrada</h4>
                         <p>Se ha registrado exitosamente la asistencia de la clase de Programación Web</p>
                         <span class="notification-time">Hace 3 horas</span>
                     </div>
-                    <button class="btn-close">✕</button>
+                    <button class="btn-close"><i class="fas fa-times"></i></button>
                 </div>
 
                 <div class="notification-item notification-warning">
-                    <div class="notification-icon">⚠️</div>
+                    <div class="notification-icon"><i class="fas fa-exclamation-circle"></i></div>
                     <div class="notification-content">
                         <h4>Recordatorio</h4>
                         <p>Recuerda completar el registro de asistencia de tus clases pendientes</p>
                         <span class="notification-time">Ayer</span>
                     </div>
-                    <button class="btn-close">✕</button>
+                    <button class="btn-close"><i class="fas fa-times"></i></button>
                 </div>
 
                 <div class="notification-item notification-info">
-                    <div class="notification-icon">📅</div>
+                    <div class="notification-icon"><i class="fas fa-calendar-plus"></i></div>
                     <div class="notification-content">
                         <h4>Nuevo Periodo Académico</h4>
                         <p>El periodo 2026-1 ha iniciado. Revisa tu horario de clases</p>
                         <span class="notification-time">Hace 2 días</span>
                     </div>
-                    <button class="btn-close">✕</button>
+                    <button class="btn-close"><i class="fas fa-times"></i></button>
                 </div>
 
                 <div class="notification-item notification-success">
-                    <div class="notification-icon">📊</div>
+                    <div class="notification-icon"><i class="fas fa-file-alt"></i></div>
                     <div class="notification-content">
                         <h4>Reporte Disponible</h4>
                         <p>Tu reporte mensual de asistencias está listo para descargar</p>
                         <span class="notification-time">Hace 3 días</span>
                     </div>
-                    <button class="btn-close">✕</button>
+                    <button class="btn-close"><i class="fas fa-times"></i></button>
                 </div>
 
                 <div class="notification-item notification-info">
-                    <div class="notification-icon">👥</div>
+                    <div class="notification-icon"><i class="fas fa-user-plus"></i></div>
                     <div class="notification-content">
                         <h4>Nuevo Usuario</h4>
                         <p>Se ha registrado un nuevo estudiante en el sistema</p>
                         <span class="notification-time">Hace 5 días</span>
                     </div>
-                    <button class="btn-close">✕</button>
+                    <button class="btn-close"><i class="fas fa-times"></i></button>
                 </div>
             </div>
         </div>
     </section>
+
+    <script src="notificaciones.js"></script>
 
     <footer>
         <div class="footer-content">

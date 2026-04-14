@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Asistencias - ASISTE-UNILIBRE</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome: librería de iconos profesionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <span class="logo-icon">📚</span>
+                <span class="logo-icon"><i class="fas fa-book-open"></i></span>
                 <span class="logo-text">ASISTE-UNILIBRE</span>
             </div>
             <ul class="nav-links">
@@ -25,21 +27,22 @@
     <section class="content-section">
         <div class="content-container">
             <div class="page-header">
-                <button onclick="history.back()" class="btn-back">← Volver</button>
-                <h2>📋 Mis Asistencias</h2>
+                <button onclick="history.back()" class="btn-back"><i class="fas fa-arrow-left"></i> Volver</button>
+                <h2><i class="fas fa-clipboard-list"></i> Mis Asistencias</h2>
             </div>
             
             <div class="filter-section">
-                <select class="filter-select">
-                    <option>Todas las Asignaturas</option>
-                    <option>Programación Web</option>
-                    <option>Base de Datos</option>
-                    <option>Ingeniería de Software</option>
+                <select class="filter-select" id="filtro-asignatura" onchange="filtrarAsistencias()">
+                    <option value="">Todas las Asignaturas</option>
+                    <option value="Programación Web">Programación Web</option>
+                    <option value="Base de Datos">Base de Datos</option>
+                    <option value="Ingeniería de Software">Ingeniería de Software</option>
                 </select>
-                <select class="filter-select">
-                    <option>Este Mes</option>
-                    <option>Último Mes</option>
-                    <option>Este Semestre</option>
+                <select class="filter-select" id="filtro-estado" onchange="filtrarAsistencias()">
+                    <option value="">Todos los Estados</option>
+                    <option value="Presente">Presente</option>
+                    <option value="Ausente">Ausente</option>
+                    <option value="Tardanza">Tardanza</option>
                 </select>
             </div>
 
@@ -94,6 +97,11 @@
                 </table>
             </div>
 
+            <!-- Mensaje cuando no hay resultados -->
+            <p id="sin-resultados" style="display:none; text-align:center; color:#888; padding:2rem;">
+                <i class="fas fa-filter"></i> No hay registros con ese filtro.
+            </p>
+
             <div class="summary-cards">
                 <div class="summary-card">
                     <h3>Total Clases</h3>
@@ -114,6 +122,8 @@
             </div>
         </div>
     </section>
+
+    <script src="estudiante-asistencias.js"></script>
 
     <footer>
         <div class="footer-content">

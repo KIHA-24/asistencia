@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notificaciones - ASISTE-UNILIBRE</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome: librería de iconos profesionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <span class="logo-icon">📚</span>
+                <span class="logo-icon"><i class="fas fa-book-open"></i></span>
                 <span class="logo-text">ASISTE-UNILIBRE</span>
             </div>
             <ul class="nav-links">
@@ -25,28 +27,28 @@
     <section class="content-section">
         <div class="content-container">
             <div class="page-header">
-                <button onclick="history.back()" class="btn-back">← Volver</button>
-                <h2>🔔 Mis Notificaciones</h2>
+                <button onclick="history.back()" class="btn-back"><i class="fas fa-arrow-left"></i> Volver</button>
+                <h2><i class="fas fa-bell"></i> Mis Notificaciones</h2>
             </div>
             
             <div class="notifications-list">
                 <!-- Notificación urgente: el docente activó la asistencia -->
                 <!-- El estudiante debe confirmar su presencia antes de que expire el tiempo -->
                 <div class="notification-item notification-warning unread">
-                    <div class="notification-icon">🔔</div>
+                    <div class="notification-icon"><i class="fas fa-exclamation-triangle"></i></div>
                     <div class="notification-content">
                         <h4>¡Tomar Asistencia Ahora!</h4>
                         <p>El profesor García ha activado la asistencia para <strong>Programación Web</strong>. Tienes <strong>8 minutos</strong> para confirmar tu presencia.</p>
                         <span class="notification-time">Hace 2 minutos</span>
                         <!-- Botón para que el estudiante confirme su asistencia -->
                         <div style="margin-top: 1rem;">
-                            <button class="btn-primary" onclick="confirmarAsistencia()">✅ Confirmar Asistencia</button>
+                            <button class="btn-primary" onclick="confirmarAsistencia()"><i class="fas fa-check-circle"></i> Confirmar Asistencia</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="notification-item notification-info unread">
-                    <div class="notification-icon">ℹ️</div>
+                    <div class="notification-icon"><i class="fas fa-info-circle"></i></div>
                     <div class="notification-content">
                         <h4>Clase Programada</h4>
                         <p>Tienes clase de Programación Web hoy a las 8:00 AM en el Salón 301</p>
@@ -55,7 +57,7 @@
                 </div>
 
                 <div class="notification-item notification-success">
-                    <div class="notification-icon">✅</div>
+                    <div class="notification-icon"><i class="fas fa-check-circle"></i></div>
                     <div class="notification-content">
                         <h4>Asistencia Confirmada</h4>
                         <p>Tu asistencia a <strong>Base de Datos</strong> fue confirmada correctamente</p>
@@ -64,7 +66,7 @@
                 </div>
 
                 <div class="notification-item notification-warning">
-                    <div class="notification-icon">⚠️</div>
+                    <div class="notification-icon"><i class="fas fa-exclamation-circle"></i></div>
                     <div class="notification-content">
                         <h4>Alerta de Asistencia</h4>
                         <p>Has faltado 3 veces a Ingeniería de Software. Recuerda que el límite es 5 faltas</p>
@@ -73,7 +75,7 @@
                 </div>
 
                 <div class="notification-item notification-info">
-                    <div class="notification-icon">📅</div>
+                    <div class="notification-icon"><i class="fas fa-calendar-alt"></i></div>
                     <div class="notification-content">
                         <h4>Cambio de Horario</h4>
                         <p>La clase de Redes de Computadores del viernes se ha movido al Salón 205</p>
@@ -82,7 +84,7 @@
                 </div>
 
                 <div class="notification-item notification-success">
-                    <div class="notification-icon">📊</div>
+                    <div class="notification-icon"><i class="fas fa-file-alt"></i></div>
                     <div class="notification-content">
                         <h4>Reporte Disponible</h4>
                         <p>Tu reporte de asistencias del mes de febrero está disponible</p>
@@ -93,12 +95,7 @@
         </div>
     </section>
 
-    <!-- Script que simula la confirmación de asistencia por parte del estudiante -->
-    <script>
-        function confirmarAsistencia() {
-            alert('✅ Asistencia confirmada exitosamente.\n\nTu presencia en Programación Web ha sido registrada.');
-        }
-    </script>
+    <script src="estudiante-notificaciones.js"></script>
 
     <footer>
         <div class="footer-content">

@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Asistencia - ASISTE-UNILIBRE</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome: librería de iconos profesionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <span class="logo-icon">📚</span>
+                <span class="logo-icon"><i class="fas fa-book-open"></i></span>
                 <span class="logo-text">ASISTE-UNILIBRE</span>
             </div>
             <ul class="nav-links">
@@ -25,8 +27,8 @@
     <section class="content-section">
         <div class="content-container">
             <div class="page-header">
-                <button onclick="history.back()" class="btn-back">← Volver</button>
-                <h2>✅ Activar Asistencia de Clase</h2>
+                <button onclick="history.back()" class="btn-back"><i class="fas fa-arrow-left"></i> Volver</button>
+                <h2><i class="fas fa-clipboard-check"></i> Activar Asistencia de Clase</h2>
             </div>
 
             <!-- Información de la clase actual -->
@@ -45,7 +47,7 @@
             <!-- Paso 1: El docente activa la asistencia -->
             <!-- Al activar, el sistema envía una notificación a todos los estudiantes de la clase -->
             <div class="asistencia-activar-card">
-                <div class="activar-icon">🔔</div>
+                <div class="activar-icon"><i class="fas fa-broadcast-tower"></i></div>
                 <h3>Activar Registro de Asistencia</h3>
                 <p>Al activar la asistencia, el sistema enviará automáticamente una notificación a todos los estudiantes de esta clase para que confirmen su presencia.</p>
 
@@ -62,17 +64,17 @@
 
                 <!-- Botón principal para activar la asistencia -->
                 <button class="btn-activar" onclick="activarAsistencia()">
-                    🔔 Activar Asistencia y Notificar Estudiantes
+                    <i class="fas fa-broadcast-tower"></i> Activar Asistencia y Notificar Estudiantes
                 </button>
             </div>
 
             <!-- Paso 2: Estado en tiempo real de respuestas de estudiantes -->
             <!-- Esta sección muestra quién ha confirmado asistencia tras la notificación -->
-            <div class="asistencia-estado-card">
+            <div class="asistencia-estado-card" style="display:none;">
                 <div class="estado-header">
                     <h3>Estado de Respuestas en Tiempo Real</h3>
                     <!-- Indicador visual del estado de la sesión -->
-                    <span class="badge-estado badge-activo">🟢 Sesión Activa</span>
+                    <span class="badge-estado badge-activo"><i class="fas fa-circle"></i> Sesión Activa</span>
                 </div>
 
                 <!-- Barra de progreso de respuestas -->
@@ -81,7 +83,7 @@
                     <div class="progress-bar">
                         <div class="progress-fill" style="width: 80%;"></div>
                     </div>
-                    <p class="tiempo-restante">⏱️ Tiempo restante: <strong>4:32</strong></p>
+                    <p class="tiempo-restante"><i class="fas fa-hourglass-half"></i> Tiempo restante: <strong>4:32</strong></p>
                 </div>
 
                 <!-- Tabla con el estado de cada estudiante -->
@@ -101,7 +103,7 @@
                             <tr>
                                 <td>2021001</td>
                                 <td>Juan Pérez</td>
-                                <td><span class="badge badge-success">✅ Confirmó</span></td>
+                                <td><span class="badge badge-success"><i class="fas fa-check"></i> Confirmó</span></td>
                                 <td>8:03 AM</td>
                                 <td>-</td>
                             </tr>
@@ -109,7 +111,7 @@
                             <tr>
                                 <td>2021002</td>
                                 <td>María González</td>
-                                <td><span class="badge badge-success">✅ Confirmó</span></td>
+                                <td><span class="badge badge-success"><i class="fas fa-check"></i> Confirmó</span></td>
                                 <td>8:05 AM</td>
                                 <td>-</td>
                             </tr>
@@ -117,7 +119,7 @@
                             <tr>
                                 <td>2021003</td>
                                 <td>Carlos Rodríguez</td>
-                                <td><span class="badge badge-warning">⏳ Pendiente</span></td>
+                                <td><span class="badge badge-warning"><i class="fas fa-clock"></i> Pendiente</span></td>
                                 <td>-</td>
                                 <td>-</td>
                             </tr>
@@ -125,7 +127,7 @@
                             <tr>
                                 <td>2021004</td>
                                 <td>Ana Martínez</td>
-                                <td><span class="badge badge-success">✅ Confirmó</span></td>
+                                <td><span class="badge badge-success"><i class="fas fa-check"></i> Confirmó</span></td>
                                 <td>8:02 AM</td>
                                 <td>-</td>
                             </tr>
@@ -133,7 +135,7 @@
                             <tr>
                                 <td>2021005</td>
                                 <td>Luis Sánchez</td>
-                                <td><span class="badge badge-danger">❌ No respondió</span></td>
+                                <td><span class="badge badge-danger"><i class="fas fa-times"></i> No respondió</span></td>
                                 <td>-</td>
                                 <td><input type="text" class="obs-input" placeholder="Agregar nota..."></td>
                             </tr>
@@ -150,12 +152,7 @@
         </div>
     </section>
 
-    <!-- Script que simula la activación de asistencia y el envío de notificaciones -->
-    <script>
-        function activarAsistencia() {
-            alert('✅ Asistencia activada.\n\n🔔 Notificación enviada a 35 estudiantes.\n\nLos estudiantes tienen 10 minutos para confirmar su asistencia.');
-        }
-    </script>
+    <script src="docente-registro.js"></script>
 
     <footer>
         <div class="footer-content">
