@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula de Asignaturas - ASISTE-UNILIBRE</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome: librería de iconos profesionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-book-open"></i></span>
+                <span class="logo-text">ASISTE-UNILIBRE</span>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="estudiante.html">Dashboard</a></li>
+                <li><a href="perfil.html">Mi Perfil</a></li>
+                <li><a href="notificaciones.html">Notificaciones</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content-section">
+        <div class="content-container">
+            <div class="page-header">
+                <button onclick="history.back()" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Volver
+                </button>
+                <h2><i class="fas fa-graduation-cap"></i> Matrícula de Asignaturas</h2>
+            </div>
+
+            <!-- Mis matrículas activas -->
+            <div class="clase-info-card" style="margin-bottom: 2rem;">
+                <h3><i class="fas fa-list-check"></i> Mis Asignaturas Matriculadas</h3>
+                <div id="lista-matriculas">
+                    <p style="color:#888; text-align:center; padding:1rem;">
+                        <i class="fas fa-spinner fa-spin"></i> Cargando matrículas...
+                    </p>
+                </div>
+            </div>
+
+            <!-- Buscador de asignaturas disponibles -->
+            <div class="reporte-form-card">
+                <h3><i class="fas fa-search"></i> Buscar Asignatura para Matricularse</h3>
+                <p style="color:#666; margin-bottom:1.5rem;">
+                    Busca una asignatura por nombre y selecciona el horario disponible.
+                </p>
+
+                <!-- Campo de búsqueda -->
+                <div class="filter-section" style="margin-bottom:1.5rem;">
+                    <div class="search-box" style="flex:1;">
+                        <input
+                            type="text"
+                            id="buscar-asignatura"
+                            class="search-input"
+                            placeholder="Ej: Programación Web, Base de Datos..."
+                            oninput="buscarAsignaturas()"
+                        >
+                    </div>
+                    <button class="btn-primary" onclick="buscarAsignaturas()">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </div>
+
+                <!-- Mensaje de sin resultados -->
+                <p id="sin-resultados-asig" style="display:none; text-align:center; color:#888; padding:1rem;">
+                    <i class="fas fa-info-circle"></i> No se encontraron asignaturas con ese nombre.
+                </p>
+
+                <!-- Resultados de búsqueda -->
+                <div id="resultados-asignaturas"></div>
+            </div>
+
+            <!-- Modal de confirmación de matrícula -->
+            <div id="modal-matricula" class="modal-overlay" style="display:none;">
+                <div class="modal-box">
+                    <div class="modal-icon">
+                        <i class="fas fa-graduation-cap" style="color: var(--color-primary); font-size:3rem;"></i>
+                    </div>
+                    <h3>Confirmar Matrícula</h3>
+                    <p id="modal-matricula-texto">¿Deseas matricularte en esta asignatura?</p>
+                    <div class="modal-actions">
+                        <button class="btn-primary" onclick="confirmarMatricula()">
+                            <i class="fas fa-check"></i> Sí, matricularme
+                        </button>
+                        <button class="btn-secondary" onclick="cerrarModalMatricula()">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal de éxito -->
+            <div id="modal-exito-matricula" class="modal-overlay" style="display:none;">
+                <div class="modal-box">
+                    <div class="modal-icon">
+                        <i class="fas fa-check-circle" style="color:#28a745; font-size:3rem;"></i>
+                    </div>
+                    <h3>¡Matrícula Exitosa!</h3>
+                    <p id="modal-exito-texto">Te has matriculado correctamente.</p>
+                    <div class="modal-actions">
+                        <button class="btn-primary" onclick="cerrarModalExito()">
+                            <i class="fas fa-check"></i> Aceptar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 ASISTE-UNILIBRE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="navbar.js"></script>
+    <script src="matricula.js"></script>
+</body>
+</html>

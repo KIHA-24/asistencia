@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,10 @@
                 <span class="logo-icon"><i class="fas fa-book-open"></i></span>
                 <span class="logo-text">ASISTE-UNILIBRE</span>
             </div>
-            <ul class="nav-links">
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="docente.html">Dashboard</a></li>
                 <li><a href="perfil.html">Mi Perfil</a></li>
                 <li><a href="notificaciones.html">Notificaciones</a></li>
@@ -84,7 +87,7 @@
                     </select>
                 </div>
 
-                <!-- Botones de acción -->
+                <!-- Botones de Acción -->
                 <div class="form-actions">
                     <button class="btn-primary" onclick="mostrarModalFinalizar()"><i class="fas fa-stop-circle"></i> Finalizar y Guardar Clase</button>
                     <button class="btn-secondary" onclick="history.back()">Cancelar</button>
@@ -93,12 +96,12 @@
         </div>
     </section>
 
-    <!-- Modal de confirmación para finalizar clase -->
+    <!-- Modal de Confirmación para finalizar clase -->
     <div id="modal-finalizar" class="modal-overlay" style="display:none;">
         <div class="modal-box">
             <div class="modal-icon"><i class="fas fa-exclamation-triangle" style="color:#ffc107; font-size:3rem;"></i></div>
-            <h3>¿Finalizar la clase?</h3>
-            <p>Esta acción bloqueará nuevos registros de asistencia. Los estudiantes que no respondieron serán marcados según la opción seleccionada.</p>
+            <h3>FFinalizar la clase?</h3>
+            <p>Esta Acción bloqueará nuevos registros de asistencia. Los estudiantes que no respondieron serán marcados según la Opción seleccionada.</p>
             <div class="modal-actions">
                 <button class="btn-primary" onclick="confirmarFinalizar()"><i class="fas fa-check"></i> Sí, finalizar</button>
                 <button class="btn-secondary" onclick="cerrarModal()">Cancelar</button>
@@ -120,11 +123,12 @@
         </div>
     </div>
 
+    <script src="navbar.js"></script>
     <script src="docente-finalizar.js"></script>
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 ASISTE-UNILIBRE. Todos los derechos reservados.</p>
+            <p>&copy; 2026 ASISTE-UNILIBRE. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>

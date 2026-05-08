@@ -82,3 +82,4 @@ function validarPassword() {
 ['pass-actual', 'pass-nueva', 'pass-confirmar'].forEach(id => {
     document.getElementById(id).addEventListener('input', () => limpiarPass(id));
 });
+   
