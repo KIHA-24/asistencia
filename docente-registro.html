@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,10 @@
                 <span class="logo-icon"><i class="fas fa-book-open"></i></span>
                 <span class="logo-text">ASISTE-UNILIBRE</span>
             </div>
-            <ul class="nav-links">
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="docente.html">Dashboard</a></li>
                 <li><a href="perfil.html">Mi Perfil</a></li>
                 <li><a href="notificaciones.html">Notificaciones</a></li>
@@ -45,11 +48,11 @@
             </div>
 
             <!-- Paso 1: El docente activa la asistencia -->
-            <!-- Al activar, el sistema envía una notificación a todos los estudiantes de la clase -->
+            <!-- Al activar, el sistema envía una Notificación a todos los estudiantes de la clase -->
             <div class="asistencia-activar-card">
                 <div class="activar-icon"><i class="fas fa-broadcast-tower"></i></div>
                 <h3>Activar Registro de Asistencia</h3>
-                <p>Al activar la asistencia, el sistema enviará automáticamente una notificación a todos los estudiantes de esta clase para que confirmen su presencia.</p>
+                <p>Al activar la asistencia, el sistema enviará automáticamente una Notificación a todos los estudiantes de esta clase para que confirmen su presencia.</p>
 
                 <!-- Configuración del tiempo disponible para que el estudiante responda -->
                 <div class="form-group" style="max-width: 300px; margin: 1.5rem auto;">
@@ -69,7 +72,7 @@
             </div>
 
             <!-- Paso 2: Estado en tiempo real de respuestas de estudiantes -->
-            <!-- Esta sección muestra quién ha confirmado asistencia tras la notificación -->
+            <!-- Esta Sección muestra quién ha confirmado asistencia tras la Notificación -->
             <div class="asistencia-estado-card" style="display:none;">
                 <div class="estado-header">
                     <h3>Estado de Respuestas en Tiempo Real</h3>
@@ -99,7 +102,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Estudiante que confirmó asistencia -->
+                            <!-- Estudiante que Confirmó asistencia -->
                             <tr>
                                 <td>2021001</td>
                                 <td>Juan Pérez</td>
@@ -107,7 +110,7 @@
                                 <td>8:03 AM</td>
                                 <td>-</td>
                             </tr>
-                            <!-- Estudiante que confirmó asistencia -->
+                            <!-- Estudiante que Confirmó asistencia -->
                             <tr>
                                 <td>2021002</td>
                                 <td>María González</td>
@@ -123,7 +126,7 @@
                                 <td>-</td>
                                 <td>-</td>
                             </tr>
-                            <!-- Estudiante que confirmó asistencia -->
+                            <!-- Estudiante que Confirmó asistencia -->
                             <tr>
                                 <td>2021004</td>
                                 <td>Ana Martínez</td>
@@ -131,7 +134,7 @@
                                 <td>8:02 AM</td>
                                 <td>-</td>
                             </tr>
-                            <!-- Estudiante que no respondió a tiempo -->
+                            <!-- Estudiante que No respondió a tiempo -->
                             <tr>
                                 <td>2021005</td>
                                 <td>Luis Sánchez</td>
@@ -146,17 +149,18 @@
                 <!-- Botones para finalizar o cancelar la sesión de asistencia -->
                 <div class="form-actions">
                     <button class="btn-primary">Finalizar y Guardar Asistencia</button>
-                    <button class="btn-secondary">Cancelar Sesión</button>
+                    <button class="btn-secondary">Cancelar sesión</button>
                 </div>
             </div>
         </div>
     </section>
 
+    <script src="navbar.js"></script>
     <script src="docente-registro.js"></script>
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 ASISTE-UNILIBRE. Todos los derechos reservados.</p>
+            <p>&copy; 2026 ASISTE-UNILIBRE. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>
