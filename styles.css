@@ -283,7 +283,7 @@ body {
    ======================================== */
 
 .login-section {
-    padding: 5rem 5%;
+    padding: 2rem 5% 3rem;
     background: var(--color-white);
 }
 
